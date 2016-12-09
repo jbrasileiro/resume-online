@@ -1,0 +1,155 @@
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.owl-source-code.4j</groupId>
+	<artifactId>resume-online</artifactId>
+	<version>0.0.1</version>
+	<packaging>pom</packaging>
+	<url>http://maven.apache.org</url>
+	<modules>
+		<module>../Frameworks</module>
+		<module>resume-online-web</module>
+		<module>resume-online-dao-imp</module>
+	</modules>
+	<properties>
+		<!-- maven-compiler-plugin -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.compilerVersion>1.5</maven.compiler.compilerVersion>
+		<maven.compiler.debug>true</maven.compiler.debug>
+		<maven.compiler.debuglevel>lines,vars,source</maven.compiler.debuglevel>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.fork>true</maven.compiler.fork>
+		<maven.compiler.verbose>true</maven.compiler.verbose>
+		<maven.compiler.showWarnings>true</maven.compiler.showWarnings>
+		<maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
+		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+
+		<!-- MAVEN PLUGINS VERSION -->
+		<version-maven-compiler-plugin>3.1</version-maven-compiler-plugin>
+		<version-maven-war-plugin>2.3</version-maven-war-plugin>
+		<version-maven-dependency-plugin>2.6</version-maven-dependency-plugin>
+		<version.maven-resources-plugin>3.0.1</version.maven-resources-plugin>
+		<version.maven-ear-plugin>2.10.1</version.maven-ear-plugin>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<!-- MODULES VERSION -->
+			<!-- DEPENDENCY VERSION -->
+			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>7.0</version>
+				<scope>provided</scope>
+			</dependency>
+			<!-- ################# -->
+			<!-- COMPILE -->
+			<!-- ################# -->
+			<!-- https://mvnrepository.com/artifact/javax.inject/javax.inject -->
+			<dependency>
+				<groupId>javax.inject</groupId>
+				<artifactId>javax.inject</artifactId>
+				<version>1</version>
+			</dependency>
+
+			<!-- ################# -->
+			<!-- TEST -->
+			<!-- ################# -->
+			<!-- https://mvnrepository.com/artifact/junit/junit -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.12</version>
+				<scope>test</scope>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-all</artifactId>
+				<version>2.0.2-beta</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<!-- ################# -->
+		<!-- MODULOS -->
+		<!-- ################# -->
+
+		<!-- ################# -->
+		<!-- PROVIDED -->
+		<!-- ################# -->
+
+		<!-- ################# -->
+		<!-- COMPILE -->
+		<!-- ################# -->
+
+		<!-- ################# -->
+		<!-- TEST -->
+		<!-- ################# -->
+	</dependencies>
+	<build>
+		<finalName>${project.artifactId}-${project.version}-final</finalName>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${version-maven-compiler-plugin}</version>
+					<configuration>
+						<compilerArgs>
+						</compilerArgs>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>${version.maven-resources-plugin}</version>
+					<configuration>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>${version-maven-dependency-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-ejb-plugin</artifactId>
+					<version>2.5.1</version>
+					<configuration>
+						<ejbVersion>3.1</ejbVersion>
+						<generateClient>true</generateClient>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-ear-plugin</artifactId>
+					<version>${version.maven-ear-plugin}</version>
+					<configuration>
+						<version>7</version>
+						<defaultLibBundleDir>lib</defaultLibBundleDir>
+						<generateApplicationXml>true</generateApplicationXml>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>${version-maven-war-plugin}</version>
+					<configuration>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>2.2</version>
+					<configuration>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

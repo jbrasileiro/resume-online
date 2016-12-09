@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resume>
+	<person>
+		<name>João Carlos Brasileiro Stefenon de Almeida</name>
+		<adress>
+			<name>Rua Santo Antonio</name>
+			<number>1304</number>
+			<info>Apt102</info>
+			<cep>9518000</cep>
+			<city>São Leopoldo</city>
+			<state>RS</state>
+		</adress>
+		<phones>
+			<phone>
+				<country-code>55</country-code>
+				<code>54</code>
+				<number>96038610</number>
+			</phone>
+			<phone>
+				<country-code>55</country-code>
+				<code>51</code>
+				<number>92904035</number>
+			</phone>
+		</phones>
+	</person>
+	<summary>
+		<goals>
+			<goal>JAVA developer</goal>
+		</goals>
+		<description> Certified Test Foundation Level (CTFL) professional with
+			national and international experience on quality area and software
+			development process, USE-CASE POINT and FUNCTION POINT estimative.
+			Evolved on complex projects including bank integration, financial and
+			sales system and many others services system. Good experience on
+			leading a small team, understand client problem, business
+			intelligence, and defining strategy to cover risk and/or functional
+			and non-functional requirements. Very good experience as Java,
+			DOT.NET, V.B6.0, C#, PHP, and practice experience with automation
+			test project with Selenium, QTP, TESTCOMPLETE and also others free
+			tools. Large knowledge on process improvement model such CMMI and
+			MPS.BR, and testing models (TMMI, Tmap and others) and experience
+			with agile method (SCRUM).
+		</description>
+	</summary>
+	<professional>
+		<experiences>
+			<experience>
+				<layout>
+					<id>0</id>
+				</layout>
+				<company>
+					<name>CWI</name>
+					<level>I</level>
+					<size>BIG</size>
+				</company>
+				<duration>
+					<start>2015/11</start>
+				</duration>
+				<allocations>
+					<allocation>
+						<client>
+							<name>GETNET</name>
+							<description></description>
+						</client>
+						<projects>
+							<project>
+								<role>JAVA DEVELOPER</role>
+								<name>G2</name>
+								<description></description>
+							</project>
+							<project>
+								<role>JAVA DEVELOPER</role>
+								<name>G2.A</name>
+								<description></description>
+							</project>
+						</projects>
+					</allocation>
+					<allocation>
+						<client>
+							<name>SSID Report</name>
+							<description></description>
+						</client>
+						<projects>
+							<project>
+								<role>JAVA DEVELOPER</role>
+								<name>G2</name>
+								<description></description>
+							</project>
+							<project>
+								<role>JAVA DEVELOPER</role>
+								<name>G2.A</name>
+								<description></description>
+							</project>
+						</projects>
+					</allocation>
+					<allocation>
+						<client>
+							<name>RCHLO</name>
+						</client>
+						<projects>
+							<project>
+								<role>JAVA DEVELOPER</role>
+								<name>FIN-CLIENTE</name>
+								<description></description>
+							</project>
+							<project>
+								<role>JAVA DEVELOPER</role>
+								<name>FIN-CARTAO</name>
+								<description></description>
+							</project>
+							<project>
+								<role>JAVA DEVELOPER</role>
+								<name>FIN-SEGURANCA</name>
+								<description></description>
+							</project>
+							<project>
+								<role>JAVA DEVELOPER</role>
+								<name>FIN-EXTRATO</name>
+								<description></description>
+							</project>
+							<project>
+								<role>JAVA DEVELOPER</role>
+								<name>FIN-CONTA</name>
+								<description></description>
+							</project>
+							<project>
+								<role>JAVA DEVELOPER</role>
+								<name>DASHBOARD</name>
+								<description></description>
+							</project>
+						</projects>
+					</allocation>
+				</allocations>
+			</experience>
+		</experiences>
+	</professional>
+</resume>
