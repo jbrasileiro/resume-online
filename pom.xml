@@ -13,6 +13,8 @@
 		<module>../Frameworks</module>
 		<module>resume-online-web</module>
 		<module>resume-online-dao-imp</module>
+		<module>resume-online-entity</module>
+		<module>resume-online-core</module>
 	</modules>
 	<properties>
 		<!-- maven-compiler-plugin -->

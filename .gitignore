@@ -1,2 +1,4 @@
 .project
 .settings
+/resume-online-core/.classpath
+/resume-online-entity/.classpath
