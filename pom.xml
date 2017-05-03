@@ -15,6 +15,7 @@
 		<module>resume-online-dao-imp</module>
 		<module>resume-online-entity</module>
 		<module>resume-online-core</module>
+		<module>resume-online-i18n</module>
 	</modules>
 	<properties>
 		<!-- maven-compiler-plugin -->

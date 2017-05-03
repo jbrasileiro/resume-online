@@ -27,7 +27,8 @@
 		<goals>
 			<goal>JAVA developer</goal>
 		</goals>
-		<description> Certified Test Foundation Level (CTFL) professional with
+		<description>
+			Certified Test Foundation Level (CTFL) professional with
 			national and international experience on quality area and software
 			development process, USE-CASE POINT and FUNCTION POINT estimative.
 			Evolved on complex projects including bank integration, financial and
@@ -40,6 +41,12 @@
 			tools. Large knowledge on process improvement model such CMMI and
 			MPS.BR, and testing models (TMMI, Tmap and others) and experience
 			with agile method (SCRUM).
+			I'm developer highly focused in delivery high quality artefacts, mainly
+			code,
+			using as based well-known "Clean code", Agile and OO principles, also
+			achieved a very mature development process and automation process
+			with
+			continuous integration.
 		</description>
 	</summary>
 	<professional>
