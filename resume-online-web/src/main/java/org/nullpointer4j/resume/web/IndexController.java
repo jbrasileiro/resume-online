@@ -1,4 +1,4 @@
-package org.nullpointer4j.web;
+package org.nullpointer4j.resume.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

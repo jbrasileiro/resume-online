@@ -10,12 +10,17 @@
 	<packaging>pom</packaging>
 	<url>http://maven.apache.org</url>
 	<modules>
+		<!-- 
 		<module>../Frameworks</module>
-		<module>resume-online-web</module>
-		<module>resume-online-dao-imp</module>
-		<module>resume-online-entity</module>
-		<module>resume-online-core</module>
+		 -->
+		<module>resume-online-db</module>
 		<module>resume-online-i18n</module>
+		<module>resume-online-core</module>
+		<module>resume-online-entity</module>
+		<module>resume-online-dao-imp</module>
+		<module>resume-online-web</module>
+		<module>resume-online-SOA</module>
+		<module>TI-resume-online</module>
 	</modules>
 	<properties>
 		<!-- maven-compiler-plugin -->
@@ -57,7 +62,11 @@
 				<artifactId>javax.inject</artifactId>
 				<version>1</version>
 			</dependency>
-
+			<dependency>
+				<groupId>com.h2database</groupId>
+				<artifactId>h2</artifactId>
+				<version>1.4.195</version>
+			</dependency>
 			<!-- ################# -->
 			<!-- TEST -->
 			<!-- ################# -->
@@ -149,8 +158,11 @@
 					<groupId>org.apache.tomcat.maven</groupId>
 					<artifactId>tomcat7-maven-plugin</artifactId>
 					<version>2.2</version>
-					<configuration>
-					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.flywaydb</groupId>
+					<artifactId>flyway-maven-plugin</artifactId>
+					<version>4.2.0</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>

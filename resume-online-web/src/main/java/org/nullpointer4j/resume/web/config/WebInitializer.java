@@ -1,4 +1,4 @@
-package org.nullpointer4j.web.config;
+package org.nullpointer4j.resume.web.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
