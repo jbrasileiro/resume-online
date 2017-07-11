@@ -13,6 +13,7 @@
 		<!-- 
 		<module>../Frameworks</module>
 		 -->
+		<module>resume-online-bom</module>
 		<module>resume-online-db</module>
 		<module>resume-online-i18n</module>
 		<module>resume-online-core</module>
@@ -20,9 +21,11 @@
 		<module>resume-online-dao-imp</module>
 		<module>resume-online-web</module>
 		<module>resume-online-SOA</module>
+		<module>resume-online-jfx</module>
 		<module>TI-resume-online</module>
 	</modules>
 	<properties>
+		<project.property.dir>C:/.rep/P/resume-online/src/properties</project.property.dir>
 		<!-- maven-compiler-plugin -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.compilerVersion>1.5</maven.compiler.compilerVersion>
@@ -42,78 +45,50 @@
 		<version-maven-dependency-plugin>2.6</version-maven-dependency-plugin>
 		<version.maven-resources-plugin>3.0.1</version.maven-resources-plugin>
 		<version.maven-ear-plugin>2.10.1</version.maven-ear-plugin>
+		<version.properties-maven-plugin>1.0.0</version.properties-maven-plugin>
+		<version.maven-surefire-plugin>2.20</version.maven-surefire-plugin>
+		<version.maven-install-plugin></version.maven-install-plugin>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
-			<!-- MODULES VERSION -->
-			<!-- DEPENDENCY VERSION -->
 			<dependency>
-				<groupId>javax</groupId>
-				<artifactId>javaee-api</artifactId>
-				<version>7.0</version>
-				<scope>provided</scope>
-			</dependency>
-			<!-- ################# -->
-			<!-- COMPILE -->
-			<!-- ################# -->
-			<!-- https://mvnrepository.com/artifact/javax.inject/javax.inject -->
-			<dependency>
-				<groupId>javax.inject</groupId>
-				<artifactId>javax.inject</artifactId>
-				<version>1</version>
-			</dependency>
-			<dependency>
-				<groupId>com.h2database</groupId>
-				<artifactId>h2</artifactId>
-				<version>1.4.195</version>
-			</dependency>
-			<!-- ################# -->
-			<!-- TEST -->
-			<!-- ################# -->
-			<!-- https://mvnrepository.com/artifact/junit/junit -->
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>4.12</version>
-				<scope>test</scope>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
-			<dependency>
-				<groupId>org.mockito</groupId>
-				<artifactId>mockito-all</artifactId>
-				<version>2.0.2-beta</version>
-				<scope>test</scope>
+				<groupId>org.owl-source-code.4j</groupId>
+				<artifactId>resume-online-bom</artifactId>
+				<version>1.0.0</version>
+				<scope>import</scope>
+				<type>pom</type>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	<dependencies>
-		<!-- ################# -->
-		<!-- MODULOS -->
-		<!-- ################# -->
-
-		<!-- ################# -->
-		<!-- PROVIDED -->
-		<!-- ################# -->
-
-		<!-- ################# -->
-		<!-- COMPILE -->
-		<!-- ################# -->
-
-		<!-- ################# -->
-		<!-- TEST -->
-		<!-- ################# -->
-	</dependencies>
 	<build>
 		<finalName>${project.artifactId}-${project.version}-final</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>properties-maven-plugin</artifactId>
+					<version>${version.properties-maven-plugin}</version>
+				</plugin>
+				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>${version-maven-compiler-plugin}</version>
+					<inherited>true</inherited>
 					<configuration>
-						<compilerArgs>
-						</compilerArgs>
+						<encoding>${project.build.sourceEncoding}</encoding>
+						<source>${maven.compiler.source}</source>
+						<target>${maven.compiler.target}</target>
+						<fork>${maven.compiler.fork}</fork>
+						<debug>${maven.compiler.debug}</debug>
+						<debuglevel>${maven.compiler.debuglevel}</debuglevel>
+						<failOnError>${maven.compiler.failOnError}</failOnError>
+						<failOnWarning>${maven.compiler.failOnWarning}</failOnWarning>
+						<maxmem>${maven.compiler.maxmem}</maxmem>
+						<meminitial>${maven.compiler.meminitial}</meminitial>
+						<optimize>${maven.compiler.optimize}</optimize>
+						<showDeprecation>${maven.compiler.showDeprecation}</showDeprecation>
+						<showWarnings>${maven.compiler.showWarnings}</showWarnings>
+						<skipMain>${maven.compiler.main.skip}</skipMain>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -121,12 +96,18 @@
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>${version.maven-resources-plugin}</version>
 					<configuration>
+						<encoding>${maven.config.encoding}</encoding>
 					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-dependency-plugin</artifactId>
 					<version>${version-maven-dependency-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${version.maven-jar-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -164,7 +145,79 @@
 					<artifactId>flyway-maven-plugin</artifactId>
 					<version>4.2.0</version>
 				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>${version.maven-install-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${version.maven-surefire-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>${version.maven-failsafe-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>com.zenjava</groupId>
+					<artifactId>javafx-maven-plugin</artifactId>
+					<version>${version.javafx-maven-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>${version.maven-antrun-plugin}</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>properties-maven-plugin</artifactId>
+				<inherited>true</inherited>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>read-project-properties</goal>
+						</goals>
+						<configuration>
+							<files>
+								<file>${project.property.dir}/mvn-read-properties.properties</file>
+								<file>${project.property.dir}/mvn-configuration.properties</file>
+								<file>${project.property.dir}/mvn-compiler.properties</file>
+								<file>${project.property.dir}/mvn-dependency.properties</file>
+								<file>${project.property.dir}/mvn-install.properties</file>
+							</files>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<inherited>false</inherited>
+				<executions>
+					<execution>
+						<id>install-external</id>
+						<phase>install</phase>
+						<goals>
+							<goal>install-file</goal>
+						</goals>
+						<configuration>
+							<file>${p.java.fx.home}/${maven.javafx.file.name}</file>
+							<repositoryLayout>${maven.javafx.repositoryLayout}</repositoryLayout>
+							<groupId>${maven.javafx.groupId}</groupId>
+							<artifactId>${maven.javafx.artifactId}</artifactId>
+							<version>${maven.javafx.version}</version>
+							<packaging>${maven.javafx.packaging}</packaging>
+							<generatePom>${maven.javafx.generatePom}</generatePom>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
 </project>
