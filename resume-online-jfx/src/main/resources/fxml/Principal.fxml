@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane
+	fx:id="pane"
+	minHeight="-Infinity"
+	minWidth="-Infinity"
+	prefHeight="680.0"
+	prefWidth="466.0"
+	tabClosingPolicy="UNAVAILABLE"
+	xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="br.com.cwi.tjrs.assinador.jfx.PrincipalController"
+>
+	<tabs>
+		<Tab text="Assinador">
+			<content>
+				<fx:include source="AbaAssinatura.fxml" />
+			</content>
+		</Tab>
+		<Tab text="Particionador">
+			<content>
+				<fx:include source="AbaParticionador.fxml" />
+			</content>
+		</Tab>
+		<Tab text="Configurações">
+			<content>
+				<fx:include source="AbaConfiguracao.fxml" />
+			</content>
+		</Tab>
+	</tabs>
+</TabPane>

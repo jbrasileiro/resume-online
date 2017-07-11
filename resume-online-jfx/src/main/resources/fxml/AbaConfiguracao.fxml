@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<AnchorPane
+	fx:id="pane"
+	maxHeight="-Infinity"
+	minHeight="-Infinity"
+	minWidth="-Infinity"
+	prefHeight="566.0"
+	prefWidth="466.0"
+	xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="br.com.cwi.tjrs.assinador.jfx.AbaConfiguracoesController"
+>
+	<children>
+		<Label
+			styleClass="default-label"
+			layoutX="14.0"
+			layoutY="14.0"
+			text="Configurações"
+			AnchorPane.leftAnchor="21.0"
+			AnchorPane.topAnchor="25.0"
+		>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<ImageView
+			styleClass="default-image-view"
+			fx:id="imgLogo"
+			fitHeight="65.0"
+			fitWidth="233.0"
+			layoutX="132.0"
+			layoutY="7.0"
+			pickOnBounds="true"
+			preserveRatio="true"
+			smooth="false"
+			AnchorPane.rightAnchor="15.0"
+			AnchorPane.topAnchor="10.0"
+		>
+			<image>
+				<Image url="@../../../../../../resources/img/logoTJRS_H.png" />
+			</image>
+		</ImageView>
+		<Separator
+			layoutY="77.0"
+			prefWidth="200.0"
+			AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="80.0" />
+		<Label
+			styleClass="default-label"
+			alignment="CENTER"
+			layoutX="5.0"
+			layoutY="92.0"
+			prefHeight="20.0"
+			prefWidth="436.0"
+			text="Particionador"
+			textAlignment="CENTER"
+			AnchorPane.leftAnchor="5.0"
+			AnchorPane.rightAnchor="5.0"
+		>
+			<font>
+				<Font size="14.0" />
+			</font>
+		</Label>
+		<TextField
+			fx:id="txtTamanhoMaxDocumento"
+			styleClass="default-text-field"
+			layoutX="21.0"
+			layoutY="129.0"
+			prefHeight="25.0"
+			prefWidth="268.0"
+			AnchorPane.leftAnchor="21.0"
+			AnchorPane.rightAnchor="50.0" />
+		<Label
+			styleClass="default-label"
+			layoutX="21.0"
+			layoutY="112.0"
+			text="Tamanho máximo do arquivo"
+			AnchorPane.leftAnchor="21.0" />
+		<Label
+			styleClass="default-label"
+			layoutX="21.0"
+			layoutY="163.0"
+			text="Diretório de destino padrão"
+			AnchorPane.leftAnchor="21.0" />
+		<TextField
+			fx:id="txtDirDestinoParticionador"
+			styleClass="default-text-field"
+			layoutX="21.0"
+			layoutY="180.0"
+			prefHeight="25.0"
+			prefWidth="268.0"
+			AnchorPane.leftAnchor="21.0"
+			AnchorPane.rightAnchor="50.0" />
+		<Label
+			styleClass="default-label"
+			layoutX="21.0"
+			layoutY="214.0"
+			text="Diretório de origem padrão"
+			AnchorPane.leftAnchor="21.0" />
+		<TextField
+			fx:id="txtDirOrigemParticionador"
+			styleClass="default-text-field"
+			layoutX="21.0"
+			layoutY="231.0"
+			prefHeight="25.0"
+			prefWidth="268.0"
+			AnchorPane.leftAnchor="21.0"
+			AnchorPane.rightAnchor="50.0" />
+		<Label
+			styleClass="default-label"
+			alignment="CENTER"
+			layoutX="208.0"
+			layoutY="273.0"
+			prefHeight="17.0"
+			prefWidth="52.0"
+			text="Assinador"
+			AnchorPane.leftAnchor="5.0"
+			AnchorPane.rightAnchor="5.0"
+		>
+			<font>
+				<Font size="14.0" />
+			</font>
+		</Label>
+		<TextField
+			fx:id="txtDirOrigemAssinador"
+			styleClass="default-text-field"
+			layoutX="21.0"
+			layoutY="374.0"
+			prefHeight="25.0"
+			prefWidth="268.0"
+			AnchorPane.leftAnchor="21.0"
+			AnchorPane.rightAnchor="50.0" />
+		<Label
+			styleClass="default-label"
+			layoutX="21.0"
+			layoutY="357.0"
+			text="Diretório de origem padrão"
+			AnchorPane.leftAnchor="21.0" />
+		<TextField
+			fx:id="txtDirDestinoAssinador"
+			styleClass="default-text-field"
+			layoutX="21.0"
+			layoutY="323.0"
+			prefHeight="25.0"
+			prefWidth="268.0"
+			AnchorPane.leftAnchor="21.0"
+			AnchorPane.rightAnchor="50.0" />
+		<Label
+			styleClass="default-label"
+			layoutX="21.0"
+			layoutY="306.0"
+			text="Diretório de destino padrão"
+			AnchorPane.leftAnchor="21.0" />
+		<Button
+			fx:id="btnDirDestinoParticionador"
+			styleClass="default-button"
+			contentDisplay="GRAPHIC_ONLY"
+			layoutX="419.0"
+			layoutY="175.0"
+			minHeight="-Infinity"
+			minWidth="-Infinity"
+			mnemonicParsing="false"
+			onAction="#onClickDirectoryChooserParticionadorDestino"
+			prefHeight="32.0"
+			prefWidth="32.0"
+			AnchorPane.rightAnchor="15.0"
+		>
+			<graphic>
+				<ImageView
+					styleClass="directory-image-view"
+					fx:id="imgOpenFolder_1"
+					fitWidth="15.0"
+					pickOnBounds="true"
+					preserveRatio="true"
+				>
+				</ImageView>
+			</graphic>
+		</Button>
+		<Button
+			fx:id="btnDirOrigemParticionador"
+			styleClass="default-button"
+			contentDisplay="GRAPHIC_ONLY"
+			layoutX="419.0"
+			layoutY="227.0"
+			minHeight="-Infinity"
+			minWidth="-Infinity"
+			mnemonicParsing="false"
+			onAction="#onClickDirectoryChooserParticionadorOrigem"
+			prefHeight="32.0"
+			prefWidth="32.0"
+			AnchorPane.rightAnchor="15.0"
+		>
+			<graphic>
+				<ImageView
+					styleClass="directory-image-view"
+					fx:id="imgOpenFolder_2"
+					fitWidth="15.0"
+					pickOnBounds="true"
+					preserveRatio="true"
+				>
+				</ImageView>
+			</graphic>
+		</Button>
+		<Button
+			fx:id="btnDirDestinoAssinador"
+			styleClass="default-button"
+			contentDisplay="GRAPHIC_ONLY"
+			layoutX="419.0"
+			layoutY="319.0"
+			mnemonicParsing="false"
+			onAction="#onClickDirectoryChooserAssinadorDestino"
+			prefHeight="32.0"
+			prefWidth="32.0"
+			AnchorPane.rightAnchor="15.0"
+		>
+			<graphic>
+				<ImageView
+					styleClass="directory-image-view"
+					fx:id="imgOpenFolder_3"
+					fitWidth="15.0"
+					pickOnBounds="true"
+					preserveRatio="true"
+				>
+				</ImageView>
+			</graphic>
+		</Button>
+		<Button
+			fx:id="btnDirOrigemAssinador"
+			styleClass="default-button"
+			contentDisplay="GRAPHIC_ONLY"
+			layoutX="419.0"
+			layoutY="370.0"
+			mnemonicParsing="false"
+			onAction="#onClickDirectoryChooserAssinadorOrigem"
+			prefHeight="32.0"
+			prefWidth="32.0"
+			AnchorPane.rightAnchor="15.0"
+		>
+			<graphic>
+				<ImageView
+					styleClass="directory-image-view"
+					fx:id="imgOpenFolder_4"
+					fitWidth="15.0"
+					pickOnBounds="true"
+					preserveRatio="true"
+				>
+				</ImageView>
+			</graphic>
+		</Button>
+		<Label
+			styleClass="default-label"
+			layoutX="310.0"
+			layoutY="133.0"
+			text="MB"
+			AnchorPane.rightAnchor="25.0" />
+		<Button
+			fx:id="btnSalvar"
+			styleClass="default-button"
+			layoutX="397.0"
+			layoutY="520.0"
+			maxHeight="-Infinity"
+			minHeight="-Infinity"
+			mnemonicParsing="false"
+			onAction="#onClickSalvar"
+			prefHeight="32.0"
+			text="Salvar"
+			AnchorPane.rightAnchor="16.0"
+		>
+			<graphic>
+				<ImageView
+					styleClass="default-image-view"
+					fx:id="imgSalvar"
+					fitWidth="15.0"
+					pickOnBounds="true"
+					preserveRatio="true"
+				>
+					<image>
+						<Image url="@../../../../../../resources/img/Save-icon.png" />
+					</image>
+				</ImageView>
+			</graphic>
+		</Button>
+		<VBox
+			styleClass="default-vbox"
+			layoutY="411.0"
+			prefHeight="50.0"
+			prefWidth="466.0"
+		>
+			<children>
+				<Label
+					styleClass="default-label"
+					text="Tipo Certificado:" />
+				<HBox
+					styleClass="default-hbox"
+					alignment="CENTER"
+					prefHeight="15.0"
+					prefWidth="430.0"
+					style="-fx-border-width: 10;"
+				>
+					<children>
+						<RadioButton
+							id="SEPARATED"
+							fx:id="rbTipoAssinaturaSeparado"
+							styleClass="default-radio-button"
+							prefHeight="17.0"
+							prefWidth="215.0"
+							selected="true"
+							text="Aquivo separado"
+						>
+							<toggleGroup>
+								<ToggleGroup fx:id="tipoCertificadoToggleGroup" />
+							</toggleGroup>
+						</RadioButton>
+						<RadioButton
+							id="AGGREGATED"
+							fx:id="rbTipoAssinaturaUnico"
+							styleClass="default-radio-button"
+							prefHeight="17.0"
+							prefWidth="215.0"
+							text="Arquivo único"
+							toggleGroup="$tipoCertificadoToggleGroup" />
+					</children>
+					<padding>
+						<Insets
+							bottom="5.0"
+							left="5.0"
+							right="5.0"
+							top="5.0" />
+					</padding>
+				</HBox>
+			</children>
+			<padding>
+				<Insets
+					bottom="5.0"
+					left="22.0"
+					right="5.0"
+					top="5.0" />
+			</padding>
+		</VBox>
+	</children>
+</AnchorPane>

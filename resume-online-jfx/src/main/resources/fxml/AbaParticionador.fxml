@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane
+	fx:id="pane"
+	maxHeight="-Infinity"
+	minHeight="-Infinity"
+	minWidth="-Infinity"
+	prefHeight="655.0"
+	prefWidth="466.0"
+	xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="br.com.cwi.tjrs.assinador.jfx.AbaParticionadorController"
+>
+	<children>
+		<Label
+			styleClass="default-label"
+			layoutX="44.0"
+			layoutY="40.0"
+			text="Particionador Offline"
+			AnchorPane.leftAnchor="21.0"
+			AnchorPane.topAnchor="25.0"
+		>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<ImageView
+			styleClass="default-image-view"
+			fx:id="imgLogo"
+			fitHeight="65.0"
+			fitWidth="233.0"
+			layoutX="162.0"
+			layoutY="33.0"
+			pickOnBounds="true"
+			preserveRatio="true"
+			smooth="false"
+			AnchorPane.rightAnchor="15.0"
+			AnchorPane.topAnchor="10.0"
+		>
+			<image>
+				<Image url="@../img/logo.png" />
+			</image>
+		</ImageView>
+		<Separator
+			layoutX="30.0"
+			layoutY="98.0"
+			prefWidth="200.0"
+			AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="80.0" />
+		<Separator
+			layoutY="145.0"
+			prefWidth="200.0"
+			AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0" />
+		<Button
+			fx:id="btnOpenFile"
+			styleClass="default-button"
+			contentDisplay="GRAPHIC_ONLY"
+			layoutX="419.0"
+			layoutY="106.0"
+			maxHeight="-Infinity"
+			minHeight="-Infinity"
+			mnemonicParsing="false"
+			onAction="#onClickSelecionarArquivo"
+			prefHeight="32.0"
+			prefWidth="32.0"
+			AnchorPane.rightAnchor="15.0"
+		>
+			<graphic>
+				<ImageView
+					styleClass="default-image-view"
+					fx:id="imgOpenFolder_1"
+					fitWidth="15.0"
+					pickOnBounds="true"
+					preserveRatio="true"
+				>
+					<image>
+						<Image url="@../img/folder-open-icon.png" />
+					</image>
+				</ImageView>
+			</graphic>
+		</Button>
+		<TextField
+			fx:id="txtArquivoSelecionado"
+			styleClass="default-text-field"
+			layoutX="15.0"
+			layoutY="109.0"
+			prefHeight="25.0"
+			prefWidth="416.0"
+			AnchorPane.leftAnchor="15.0"
+			AnchorPane.rightAnchor="55.0" />
+		<Label
+			styleClass="default-label"
+			layoutX="25.0"
+			layoutY="89.0"
+			text="Selecionar Arquivo"
+			AnchorPane.leftAnchor="25.0" />
+		<Separator
+			layoutY="212.0"
+			prefWidth="200.0"
+			AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0" />
+		<Button
+			fx:id="btnOpenDirectory"
+			styleClass="default-button"
+			contentDisplay="GRAPHIC_ONLY"
+			layoutX="419.0"
+			layoutY="173.0"
+			maxHeight="-Infinity"
+			minHeight="-Infinity"
+			mnemonicParsing="false"
+			onAction="#onClickSelecionarPasta"
+			prefHeight="32.0"
+			prefWidth="32.0"
+			AnchorPane.rightAnchor="15.0"
+		>
+			<graphic>
+				<ImageView
+					styleClass="default-image-view"
+					fx:id="imgOpenFolder_2"
+					fitWidth="15.0"
+					pickOnBounds="true"
+					preserveRatio="true"
+				>
+					<image>
+						<Image url="@../img/folder-open-icon.png" />
+					</image>
+				</ImageView>
+			</graphic>
+		</Button>
+		<TextField
+			fx:id="txtDiretorioDestino"
+			styleClass="default-text-field"
+			layoutX="15.0"
+			layoutY="176.0"
+			prefHeight="25.0"
+			prefWidth="400.0"
+			AnchorPane.leftAnchor="15.0"
+			AnchorPane.rightAnchor="55.0" />
+		<Label
+			styleClass="default-label"
+			layoutX="25.0"
+			layoutY="156.0"
+			text="Definir Diretório de Destino"
+			AnchorPane.leftAnchor="25.0" />
+		<Label
+			styleClass="default-label"
+			fx:id="lblInfoTamanho"
+			layoutX="25.0"
+			layoutY="221.0"
+			text="Particionar Arquivo ( Máximo 0MB)"
+			AnchorPane.leftAnchor="25.0" />
+		<Label
+			styleClass="default-label"
+			fx:id="lblInfoArquivo"
+			layoutX="25.0"
+			layoutY="238.0"
+			text="Arquivo selecionado contém: 0 páginas e 0MB"
+			AnchorPane.leftAnchor="25.0" />
+		<TableView
+			fx:id="tableView"
+			styleClass="default-table-view"
+			layoutX="21.0"
+			layoutY="257.0"
+			maxHeight="-Infinity"
+			minHeight="-Infinity"
+			minWidth="-Infinity"
+			prefHeight="270.0"
+			prefWidth="436.0"
+			AnchorPane.leftAnchor="15.0"
+			AnchorPane.rightAnchor="15.0"
+		>
+			<columns>
+				<TableColumn
+					fx:id="coluna1"
+					styleClass="default-table-column"
+					editable="false"
+					minWidth="-Infinity"
+					prefWidth="427.0"
+					sortable="false" />
+			</columns>
+		</TableView>
+		<Button
+			fx:id="btnParticionar"
+			styleClass="default-button"
+			layoutX="399.0"
+			layoutY="582.0"
+			mnemonicParsing="false"
+			onAction="#onClickParticionar"
+			prefHeight="32.0"
+			text="Particionar"
+			AnchorPane.rightAnchor="15.0"
+		>
+			<graphic>
+				<ImageView
+					styleClass="default-image-view"
+					fx:id="imgParticionar"
+					fitWidth="15.0"
+					pickOnBounds="true"
+					preserveRatio="true"
+				>
+					<image>
+						<Image url="@../img/Ok-icon.png" />
+					</image>
+				</ImageView>
+			</graphic>
+		</Button>
+		<ProgressBar
+			fx:id="progressBar"
+			styleClass="default-progress-bar"
+			layoutX="15.0"
+			layoutY="619.0"
+			prefWidth="200.0"
+			progress="0.0"
+			AnchorPane.leftAnchor="15.0"
+			AnchorPane.rightAnchor="15.0" />
+		<Label
+			styleClass="default-label"
+			layoutX="25.0"
+			layoutY="593.0"
+			text="Particionar Arquivos"
+			AnchorPane.leftAnchor="25.0" />
+		<Separator
+			layoutX="-4.0"
+			layoutY="576.0"
+			prefWidth="200.0"
+			AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0" />
+		<ComboBox
+			fx:id="cmbAte"
+			styleClass="default-combo-box"
+			layoutX="104.0"
+			layoutY="535.0"
+			prefHeight="32.0"
+			prefWidth="0.0"
+			AnchorPane.leftAnchor="104.0" />
+		<Label
+			styleClass="default-label"
+			layoutX="86.0"
+			layoutY="541.0"
+			text="até"
+			AnchorPane.leftAnchor="86.0" />
+		<ComboBox
+			fx:id="cmbDe"
+			styleClass="default-combo-box"
+			layoutX="33.0"
+			layoutY="535.0"
+			prefHeight="32.0"
+			prefWidth="0.0"
+			AnchorPane.leftAnchor="33.0" />
+		<Label
+			styleClass="default-label"
+			layoutX="13.0"
+			layoutY="542.0"
+			text="De"
+			AnchorPane.leftAnchor="15.0" />
+		<TextField
+			fx:id="txtArquivoAdicional"
+			styleClass="default-text-field"
+			layoutX="160.0"
+			layoutY="538.0"
+			prefHeight="25.0"
+			prefWidth="215.0"
+			AnchorPane.leftAnchor="158.0"
+			AnchorPane.rightAnchor="55.0" />
+		<Button
+			fx:id="btnAdicionar"
+			styleClass="default-button"
+			layoutX="379.0"
+			layoutY="534.0"
+			mnemonicParsing="false"
+			onAction="#onClickAdicionar"
+			prefHeight="32.0"
+			prefWidth="32.0"
+			AnchorPane.rightAnchor="15.0"
+		>
+			<graphic>
+				<ImageView
+					styleClass="directory-image-view"
+					fx:id="imgAdicionar"
+					fitWidth="15.0"
+					pickOnBounds="true"
+					preserveRatio="true"
+				>
+				</ImageView>
+			</graphic>
+		</Button>
+		<ProgressIndicator
+			fx:id="progressIndicator"
+			visible="false"
+			layoutY="365.0"
+			maxHeight="60.0"
+			minHeight="60.0"
+			prefHeight="60.0"
+			progress="0.0"
+			AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0" />
+	</children>
+</AnchorPane>

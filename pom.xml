@@ -14,31 +14,15 @@
 		<module>../Frameworks</module>
 		 -->
 		<module>resume-online-bom</module>
-		<module>resume-online-db</module>
 		<module>resume-online-i18n</module>
-		<module>resume-online-core</module>
-		<module>resume-online-entity</module>
-		<module>resume-online-dao-imp</module>
+		<module>resume-online-backend</module>
 		<module>resume-online-web</module>
-		<module>resume-online-SOA</module>
 		<module>resume-online-jfx</module>
 		<module>TI-resume-online</module>
 	</modules>
 	<properties>
 		<project.property.dir>C:/.rep/P/resume-online/src/properties</project.property.dir>
-		<!-- maven-compiler-plugin -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.compilerVersion>1.5</maven.compiler.compilerVersion>
-		<maven.compiler.debug>true</maven.compiler.debug>
-		<maven.compiler.debuglevel>lines,vars,source</maven.compiler.debuglevel>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.fork>true</maven.compiler.fork>
-		<maven.compiler.verbose>true</maven.compiler.verbose>
-		<maven.compiler.showWarnings>true</maven.compiler.showWarnings>
-		<maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
-		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
-
+		<project.build.sourceEncoding>${maven.config.encoding}</project.build.sourceEncoding>
 		<!-- MAVEN PLUGINS VERSION -->
 		<version-maven-compiler-plugin>3.1</version-maven-compiler-plugin>
 		<version-maven-war-plugin>2.3</version-maven-war-plugin>
@@ -47,7 +31,9 @@
 		<version.maven-ear-plugin>2.10.1</version.maven-ear-plugin>
 		<version.properties-maven-plugin>1.0.0</version.properties-maven-plugin>
 		<version.maven-surefire-plugin>2.20</version.maven-surefire-plugin>
-		<version.maven-install-plugin></version.maven-install-plugin>
+		<version.maven-install-plugin>2.5.2</version.maven-install-plugin>
+		<version.maven-jar-plugin>3.0.2</version.maven-jar-plugin>
+		<version.javafx-maven-plugin>8.8.3</version.javafx-maven-plugin>
 	</properties>
 	<dependencyManagement>
 		<dependencies>

@@ -1,0 +1,61 @@
+/*
+	https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html
+*/
+/*
+	Default class selectors:
+*/
+.default-table-column {
+	
+}
+
+.default-label {
+	
+}
+
+.default-button {
+	
+}
+
+.default-table-view {
+	
+}
+
+.default-combo-box {
+	
+}
+
+.default-text-field {
+	
+}
+
+.default-progress-bar {
+	
+}
+
+.default-vbox {
+	
+}
+
+.default-hbox {
+	
+}
+
+.default-radio-button {
+	
+}
+
+.default-image-view{
+	
+}
+/*
+	Custom class selectors:
+*/
+.directory-image-view{
+	-fx-image: url('../img/FolderOpen.png');
+}
+.file-image-view{
+	
+}
+/*
+	ID style selectors:
+*/

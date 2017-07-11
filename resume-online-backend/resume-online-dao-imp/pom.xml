@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.owl-source-code.4j</groupId>
-		<artifactId>resume-online</artifactId>
+		<artifactId>resume-online-backend</artifactId>
 		<version>0.0.1</version>
 	</parent>
 	<artifactId>resume-online-dao-imp</artifactId>
@@ -14,13 +14,11 @@
 		<dependency>
 			<groupId>org.owl-source-code.4j</groupId>
 			<artifactId>resume-online-entity</artifactId>
-			<version>0.0.1</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.owl-source-code.4j</groupId>
 			<artifactId>resume-online-core</artifactId>
-			<version>0.0.1</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>

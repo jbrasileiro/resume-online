@@ -8,9 +8,52 @@
 	<artifactId>resume-online-bom</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
+	<properties>
+		<version.module.bandle>0.0.1</version.module.bandle>
+	</properties>
 	<dependencyManagement>
 		<dependencies>
 			<!-- MODULES VERSION -->
+			<dependency>
+				<groupId>org.owl-source-code.4j</groupId>
+				<artifactId>resume-online-i18n</artifactId>
+				<version>${version.module.bandle}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.owl-source-code.4j</groupId>
+				<artifactId>resume-online-core</artifactId>
+				<version>${version.module.bandle}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.owl-source-code.4j</groupId>
+				<artifactId>resume-online-dao-imp</artifactId>
+				<version>${version.module.bandle}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.owl-source-code.4j</groupId>
+				<artifactId>resume-online-db</artifactId>
+				<version>${version.module.bandle}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.owl-source-code.4j</groupId>
+				<artifactId>resume-online-entity</artifactId>
+				<version>${version.module.bandle}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.owl-source-code.4j</groupId>
+				<artifactId>resume-online-SOA</artifactId>
+				<version>${version.module.bandle}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.owl-source-code.4j</groupId>
+				<artifactId>resume-online-jfx</artifactId>
+				<version>${version.module.bandle}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.owl-source-code.4j</groupId>
+				<artifactId>resume-online-web</artifactId>
+				<version>${version.module.bandle}</version>
+			</dependency>
 			<!-- DEPENDENCY VERSION -->
 			<dependency>
 				<groupId>javax</groupId>

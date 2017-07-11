@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.owl-source-code.4j</groupId>
+    <artifactId>resume-online</artifactId>
+    <version>0.0.1</version>
+  </parent>
+  <artifactId>resume-online-backend</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+		<!-- 
+		<module>../Frameworks</module>
+		 -->
+		<module>resume-online-db</module>
+		<module>resume-online-core</module>
+		<module>resume-online-entity</module>
+		<module>resume-online-dao-imp</module>
+		<module>resume-online-SOA</module>
+	</modules>
+</project>
