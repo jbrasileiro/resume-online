@@ -10,10 +10,26 @@
 	<packaging>pom</packaging>
 	<properties>
 		<version.module.bandle>0.0.1</version.module.bandle>
+		<!-- DEPENDENCY VERSION -->
+		<version.junit>4.12</version.junit>
+		<version.mockito-all>1.10.19</version.mockito-all>
+		<version.mockito-all>1.10.19</version.mockito-all>
+		<version.weld-se-core>2.4.4.Final</version.weld-se-core>
+		<version.pdfbox>2.0.6</version.pdfbox>
+		<version.javax.inject>1</version.javax.inject>
+		<version.cdi-api>1.1</version.cdi-api>
+		<version.commons-lang3>3.6</version.commons-lang3>
+		<version.itextpdf>5.5.11</version.itextpdf>
+		<version.demoiselle>1.2.1</version.demoiselle>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
 			<!-- MODULES VERSION -->
+			<dependency>
+				<groupId>org.owl-source-code.4j</groupId>
+				<artifactId>resume-online-images</artifactId>
+				<version>${version.module.bandle}</version>
+			</dependency>
 			<dependency>
 				<groupId>org.owl-source-code.4j</groupId>
 				<artifactId>resume-online-i18n</artifactId>
@@ -21,7 +37,22 @@
 			</dependency>
 			<dependency>
 				<groupId>org.owl-source-code.4j</groupId>
+				<artifactId>resume-online-commons</artifactId>
+				<version>${version.module.bandle}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.owl-source-code.4j</groupId>
 				<artifactId>resume-online-core</artifactId>
+				<version>${version.module.bandle}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.owl-source-code.4j</groupId>
+				<artifactId>resume-online-jfx-core</artifactId>
+				<version>${version.module.bandle}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.owl-source-code.4j</groupId>
+				<artifactId>resume-online-jfx-cdi</artifactId>
 				<version>${version.module.bandle}</version>
 			</dependency>
 			<dependency>
@@ -68,12 +99,47 @@
 			<dependency>
 				<groupId>javax.inject</groupId>
 				<artifactId>javax.inject</artifactId>
-				<version>1</version>
+				<version>${version.javax.inject}</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.enterprise</groupId>
+				<artifactId>cdi-api</artifactId>
+				<version>${version.cdi-api}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.h2database</groupId>
 				<artifactId>h2</artifactId>
 				<version>1.4.195</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.weld.se</groupId>
+				<artifactId>weld-se-core</artifactId>
+				<version>${version.weld-se-core}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.pdfbox</groupId>
+				<artifactId>pdfbox</artifactId>
+				<version>${version.pdfbox}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${version.commons-lang3}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.itextpdf</groupId>
+				<artifactId>itextpdf</artifactId>
+				<version>${version.itextpdf}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.itextpdf</groupId>
+				<artifactId>itext-xtra</artifactId>
+				<version>${version.itextpdf}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.itextpdf.tool</groupId>
+				<artifactId>xmlworker</artifactId>
+				<version>${version.itextpdf}</version>
 			</dependency>
 			<!-- ################# -->
 			<!-- TEST -->
