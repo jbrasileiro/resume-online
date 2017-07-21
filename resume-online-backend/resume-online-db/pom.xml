@@ -16,6 +16,18 @@
 			<artifactId>h2</artifactId>
 		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 	<profiles>
 		<profile>
 			<id>FLYWAY-MIGRATE</id>
@@ -27,7 +39,6 @@
 					<plugin>
 						<groupId>org.flywaydb</groupId>
 						<artifactId>flyway-maven-plugin</artifactId>
-						<version>4.2.0</version>
 						<configuration>
 							<url>jdbc:h2:file:${project.build.directory}/db/h2/resume-online</url>
 							<configFile>src/properties/flyway.properties</configFile>

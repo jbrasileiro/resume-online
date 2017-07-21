@@ -1,0 +1,96 @@
+/*
+	https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html
+*/
+/*
+	Default class selectors:
+*/
+.default-table-column {
+	
+}
+.default-label {
+	
+}
+.default-button {
+	
+}
+.default-table-view {
+	
+}
+.default-combo-box {
+	
+}
+.default-text-field {
+	
+}
+.default-progress-bar {
+	
+}
+.default-vbox {
+	-fx-alignment: top-center ;
+}
+.default-hbox {
+	-fx-alignment: top-center ;	
+}
+.default-box {
+	
+	-fx-alignment: top-center ;
+}
+.default-radio-button {
+	
+}
+.default-image-view{
+	
+}
+.default-padding{
+	/* TOP RIGHT BOTTOM LEFT */
+	-fx-padding: 5.0 5.0 5.0 5.0; 
+}
+.directory-button{
+    -fx-max-height: 32.0px;
+    -fx-max-width: 32.0px;
+    -fx-pref-height: 32.0px;
+    -fx-pref-width: 32.0px;
+	
+}
+.directory-image-view{
+	-fx-image: url('../img/folder-open-24x24.png');
+}
+.file-image-view{
+	
+}
+.hbox-border{
+	-fx-border-style: solid inside; 
+	-fx-border-width: 0.5;
+	-fx-border-insets: 5.0;
+	-fx-border-radius: 5.0;
+	-fx-border-color: black ;
+}
+.vbox-border{
+	-fx-border-style: solid inside; 
+	-fx-border-width: 0.5;
+	-fx-border-insets: 5.0;
+	-fx-border-radius: 5.0;
+	-fx-border-color: black ;
+}
+.box-border{
+	-fx-border-style: solid inside; 
+	-fx-border-width: 0.5;
+	-fx-border-insets: 5.0;
+	-fx-border-radius: 5.0;
+	-fx-border-color: black ;
+	-fx-alignment: top-center ;
+}
+.box-border-red{
+	-fx-border-style: solid inside; 
+	-fx-border-width: 0.5;
+	-fx-border-insets: 5.0;
+	-fx-border-radius: 5.0;
+	-fx-border-color: red ;
+}
+.box-border-green{
+	-fx-border-style: solid inside; 
+	-fx-border-width: 0.5;
+	-fx-border-insets: 5.0;
+	-fx-border-radius: 5.0;
+	-fx-border-color: green ;
+}

@@ -17,12 +17,20 @@
 		<module>resume-online-i18n</module>
 		<module>resume-online-backend</module>
 		<module>resume-online-web</module>
+		<module>resume-online-jfx-core</module>
+		<module>resume-online-jfx-cdi</module>
 		<module>resume-online-jfx</module>
 		<module>TI-resume-online</module>
+		<module>resume-online-images</module>
 	</modules>
 	<properties>
 		<project.property.dir>C:/.rep/P/resume-online/src/properties</project.property.dir>
+		<encoding>UTF-8</encoding>
+		<!-- 
 		<project.build.sourceEncoding>${maven.config.encoding}</project.build.sourceEncoding>
+		 -->
+		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+		<javafx.version>${maven.install.javafx.version}</javafx.version>
 		<!-- MAVEN PLUGINS VERSION -->
 		<version-maven-compiler-plugin>3.1</version-maven-compiler-plugin>
 		<version-maven-war-plugin>2.3</version-maven-war-plugin>
@@ -33,7 +41,7 @@
 		<version.maven-surefire-plugin>2.20</version.maven-surefire-plugin>
 		<version.maven-install-plugin>2.5.2</version.maven-install-plugin>
 		<version.maven-jar-plugin>3.0.2</version.maven-jar-plugin>
-		<version.javafx-maven-plugin>8.8.3</version.javafx-maven-plugin>
+		<version.javafx-maven-plugin>2.0</version.javafx-maven-plugin>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -44,12 +52,31 @@
 				<scope>import</scope>
 				<type>pom</type>
 			</dependency>
+			<dependency>
+				<groupId>com.oracle</groupId>
+				<artifactId>jfxrt</artifactId>
+				<version>2.2.80</version>
+				<scope>provided</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<build>
 		<finalName>${project.artifactId}-${project.version}-final</finalName>
 		<pluginManagement>
 			<plugins>
+				<!-- Eclipse project -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<version>2.9</version>
+					<configuration>
+						<!-- Always download and attach dependencies source code -->
+						<downloadSources>true</downloadSources>
+						<downloadJavadocs>true</downloadJavadocs>
+						<!-- Avoid type mvn eclipse:eclipse -Dwtpversion=2.0 -->
+						<wtpversion>2.0</wtpversion>
+					</configuration>
+				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>properties-maven-plugin</artifactId>
@@ -82,7 +109,7 @@
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>${version.maven-resources-plugin}</version>
 					<configuration>
-						<encoding>${maven.config.encoding}</encoding>
+						<encoding>${encoding}</encoding>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -171,6 +198,7 @@
 						</goals>
 						<configuration>
 							<files>
+								<file>${project.property.dir}/mvn-java.properties</file>
 								<file>${project.property.dir}/mvn-read-properties.properties</file>
 								<file>${project.property.dir}/mvn-configuration.properties</file>
 								<file>${project.property.dir}/mvn-compiler.properties</file>
@@ -187,19 +215,19 @@
 				<inherited>false</inherited>
 				<executions>
 					<execution>
-						<id>install-external</id>
+						<id>install-javafx</id>
 						<phase>install</phase>
 						<goals>
 							<goal>install-file</goal>
 						</goals>
 						<configuration>
-							<file>${p.java.fx.home}/${maven.javafx.file.name}</file>
-							<repositoryLayout>${maven.javafx.repositoryLayout}</repositoryLayout>
-							<groupId>${maven.javafx.groupId}</groupId>
-							<artifactId>${maven.javafx.artifactId}</artifactId>
-							<version>${maven.javafx.version}</version>
-							<packaging>${maven.javafx.packaging}</packaging>
-							<generatePom>${maven.javafx.generatePom}</generatePom>
+							<file>${maven.install.javafx.file}</file>
+							<repositoryLayout>${maven.install.javafx.repositoryLayout}</repositoryLayout>
+							<groupId>${maven.install.javafx.groupId}</groupId>
+							<artifactId>${maven.install.javafx.artifactId}</artifactId>
+							<version>${maven.install.javafx.version}</version>
+							<packaging>${maven.install.javafx.packaging}</packaging>
+							<generatePom>${maven.install.javafx.generatePom}</generatePom>
 						</configuration>
 					</execution>
 				</executions>

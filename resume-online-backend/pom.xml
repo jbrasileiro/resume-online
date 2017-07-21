@@ -16,5 +16,6 @@
 		<module>resume-online-entity</module>
 		<module>resume-online-dao-imp</module>
 		<module>resume-online-SOA</module>
-	</modules>
+		<module>resume-online-commons</module>
+  </modules>
 </project>
