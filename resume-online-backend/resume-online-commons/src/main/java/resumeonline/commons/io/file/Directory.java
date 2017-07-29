@@ -1,4 +1,4 @@
-package resumeonline.commons.io;
+package resumeonline.commons.io.file;
 
 import java.io.File;
 import java.io.IOException;

@@ -6,7 +6,7 @@ import java.util.List;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import resumeonline.commons.exeception.NoNewInstanceAllowed;
-import resumeonline.commons.io.Directory;
+import resumeonline.commons.io.file.Directory;
 import resumeonline.jfx.core.ui.component.JFXWindow;
 
 public final class JFXChooser {

@@ -1,11 +1,11 @@
-package resumeonline.commons.util;
+package resumeonline.commons.io.file.utils;
 
 import java.io.File;
 import java.io.IOException;
 
 import resumeonline.commons.exeception.FileNotDeleted;
 import resumeonline.commons.exeception.NoNewInstanceAllowed;
-import resumeonline.commons.io.Directory;
+import resumeonline.commons.io.file.Directory;
 
 public final class FileMakerUtils {
 

@@ -15,13 +15,13 @@
 		 -->
 		<module>resume-online-bom</module>
 		<module>resume-online-i18n</module>
+		<module>resume-online-images</module>
 		<module>resume-online-backend</module>
 		<module>resume-online-web</module>
 		<module>resume-online-jfx-core</module>
 		<module>resume-online-jfx-cdi</module>
 		<module>resume-online-jfx</module>
 		<module>TI-resume-online</module>
-		<module>resume-online-images</module>
 	</modules>
 	<properties>
 		<project.property.dir>C:/.rep/P/resume-online/src/properties</project.property.dir>

@@ -1,6 +1,5 @@
 package resumeonline.jfx.cdi.core;
 
-import org.jboss.weld.environment.se.Weld;
 import org.jboss.weld.environment.se.WeldContainer;
 
 import javafx.application.Application;
@@ -11,7 +10,7 @@ public abstract class AbstractWeldJavaFXApplication
     Application {
 
     private final Class<? extends Application> clazz;
-    private static final WeldContainer WELD_CONTAINER = new Weld().initialize();
+    private static final WeldContainer WELD_CONTAINER = WeldProvider.get();
 
     protected AbstractWeldJavaFXApplication(
         final Class<? extends Application> clazz) {
@@ -38,11 +37,4 @@ public abstract class AbstractWeldJavaFXApplication
         super.stop();
         WELD_CONTAINER.close();
     }
-
-    // FIXME : Should be work with @inject by field;
-    public static <T> T getBean(
-        final Class<T> type) {
-        return WELD_CONTAINER.select(type).get();
-    }
-
 }

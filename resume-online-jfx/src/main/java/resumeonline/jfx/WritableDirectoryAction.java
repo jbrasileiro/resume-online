@@ -6,7 +6,7 @@ import javafx.beans.value.WritableStringValue;
 import javafx.scene.layout.AnchorPane;
 import resumeonline.commons.EventAction;
 import resumeonline.commons.EventActionType;
-import resumeonline.commons.io.Directory;
+import resumeonline.commons.io.file.Directory;
 import resumeonline.commons.si.NoEventAction;
 import resumeonline.jfx.core.JFXChooser;
 
@@ -25,7 +25,7 @@ public final class WritableDirectoryAction
         this(pane, field, new Directory(field.get()));
     }
 
-    public WritableDirectoryAction(
+    private WritableDirectoryAction(
         final AnchorPane pane,
         final WritableStringValue field,
         final Directory directory) {

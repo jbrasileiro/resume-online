@@ -6,7 +6,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import resumeonline.commons.EventAction;
 import resumeonline.commons.EventActionType;
-import resumeonline.commons.io.Directory;
+import resumeonline.commons.io.file.Directory;
 import resumeonline.commons.si.NoEventAction;
 import resumeonline.jfx.core.JFXChooser;
 

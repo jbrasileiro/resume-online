@@ -1,6 +1,8 @@
-package resumeonline.commons.io;
+package resumeonline.commons.io.file;
 
 import java.io.File;
+
+import resumeonline.commons.io.FileSize;
 
 public abstract class AbstractCustomFile
     extends

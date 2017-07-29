@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 import resumeonline.commons.exeception.NoNewInstanceAllowed;
-import resumeonline.commons.util.FileMakerUtils;
+import resumeonline.commons.io.file.utils.FileMakerUtils;
 
 public final class PropertyFileWritter {
 

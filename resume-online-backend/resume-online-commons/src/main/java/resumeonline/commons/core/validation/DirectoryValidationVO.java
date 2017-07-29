@@ -1,6 +1,6 @@
 package resumeonline.commons.core.validation;
 
-import resumeonline.commons.io.Directory;
+import resumeonline.commons.io.file.Directory;
 
 public final class DirectoryValidationVO {
 

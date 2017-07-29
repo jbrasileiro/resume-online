@@ -2,7 +2,7 @@ package resumeonline.jfx.core;
 
 import javafx.stage.FileChooser;
 import resumeonline.commons.exeception.NoNewInstanceAllowed;
-import resumeonline.commons.io.Directory;
+import resumeonline.commons.io.file.Directory;
 
 public final class FileChooserProvider {
 

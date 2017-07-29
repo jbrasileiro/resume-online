@@ -2,7 +2,7 @@ package resumeonline.jfx.core.ui.listener;
 
 import javafx.beans.property.ReadOnlyBooleanProperty;
 import javafx.scene.control.TextField;
-import resumeonline.commons.util.FileUtils;
+import resumeonline.commons.io.file.utils.FileUtils;
 import resumeonline.jfx.core.DialogBoxUtils;
 import resumeonline.jfx.core.JavaFXUtils;
 

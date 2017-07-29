@@ -16,7 +16,10 @@ public abstract class AbstractI18NController
         final URL location,
         final ResourceBundle resources) {
         this.resources = resources;
+        initialize();
     }
+
+    protected abstract void initialize();
 
     protected ResourceBundle getResources() {
         return resources;

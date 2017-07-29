@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import resumeonline.commons.exeception.UIException;
-import resumeonline.commons.io.Directory;
+import resumeonline.commons.io.file.Directory;
 
 public final class DirectoryValidator {
 
