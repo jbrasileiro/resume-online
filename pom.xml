@@ -17,10 +17,7 @@
 		<module>resume-online-i18n</module>
 		<module>resume-online-images</module>
 		<module>resume-online-backend</module>
-		<module>resume-online-web</module>
-		<module>resume-online-jfx-core</module>
-		<module>resume-online-jfx-cdi</module>
-		<module>resume-online-jfx</module>
+		<module>resume-online-frontend</module>
 		<module>TI-resume-online</module>
 	</modules>
 	<properties>
