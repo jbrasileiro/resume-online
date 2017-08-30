@@ -1,5 +1,7 @@
 package resumeonline.jfx.core.ui.component.splashscreen;
 
+import java.net.URL;
+
 import javafx.animation.PauseTransition;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
@@ -12,6 +14,7 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
+import resumeonline.commons.ResourceThreadLoader;
 import resumeonline.images.DefaultImages;
 import resumeonline.jfx.core.JFXDefaultImages;
 import resumeonline.jfx.core.JFXFramework;
@@ -60,6 +63,8 @@ public final class DefaultSplashScreenStage
         JFXFramework.set(img).image(DefaultImages.IMG_LOADING);
         SplashScreenPane pane = new SplashScreenPane(stage, img, next, task);
         setScene(new Scene(pane));
+        URL css = ResourceThreadLoader.getResource(Thread.currentThread(), "css/application.css");
+        getScene().getStylesheets().add(css.toExternalForm());
         Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
         stage.setX((primScreenBounds.getWidth() - stage.getWidth()) / 2);
         stage.setY((primScreenBounds.getHeight() - stage.getHeight()) / 2);

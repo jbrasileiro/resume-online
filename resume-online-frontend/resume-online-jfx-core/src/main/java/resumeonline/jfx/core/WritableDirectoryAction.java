@@ -1,4 +1,4 @@
-package resumeonline.jfx;
+package resumeonline.jfx.core;
 
 import java.io.File;
 
