@@ -47,8 +47,8 @@ public final class ApplicationContoller
     @FXML
     public void onActionExecute(
         final ActionEvent event) {
-        File file = new File(directory.get());
         try {
+            File file = new File(directory.get(), File.createTempFile("tmp-", ".pdf").getName());
             FileWriterUtils.write(file, resumePDFService.getResumeContent());
             WindowFile.open(file);
         } catch (IOException e) {

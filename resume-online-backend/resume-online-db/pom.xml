@@ -10,6 +10,10 @@
 		<version>0.0.1</version>
 	</parent>
 	<artifactId>resume-online-db</artifactId>
+	<properties>
+		<mvn.db.url.flyway>${project.build.directory}/db/flyway/h2/resume-online</mvn.db.url.flyway>
+		<mvn.db.url.liquibase>${project.build.directory}/db/liquibase/h2/resume-online</mvn.db.url.liquibase>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>com.h2database</groupId>
@@ -17,6 +21,56 @@
 		</dependency>
 	</dependencies>
 	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.flywaydb</groupId>
+					<artifactId>flyway-maven-plugin</artifactId>
+					<configuration>
+						<configFile>src/properties/flyway.properties</configFile>
+						<baselineDescription></baselineDescription>
+						<url>jdbc:h2:file:${mvn.db.url.flyway}</url>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.liquibase</groupId>
+					<artifactId>liquibase-maven-plugin</artifactId>
+					<configuration>
+						<propertyFile>src/properties/liquibase.properties</propertyFile>
+						<url>jdbc:h2:file:${mvn.db.url.liquibase}</url>
+							<!-- 
+							<driver></driver>
+							<url></url>
+							<password></password>
+							<username></username>
+							
+							<changelogCatalogName>mvn.liquidbase.changelogCatalogName</changelogCatalogName>
+							<changeLogFile></changeLogFile>
+							<changelogSchemaName></changelogSchemaName>
+							<changeSetAuthor></changeSetAuthor>
+							<changeSetContext></changeSetContext>
+							<changesToApply></changesToApply>
+							<clearCheckSums></clearCheckSums>
+							<contexts></contexts>
+							<databaseClass></databaseClass>
+							<dataDir></dataDir>
+							<defaultCatalogName></defaultCatalogName>
+							<defaultSchemaName></defaultSchemaName>
+							<detail></detail>
+							<diffChangeLogFile></diffChangeLogFile>
+							<diffIncludeCatalog></diffIncludeCatalog>
+							<diffIncludeSchema></diffIncludeSchema>
+							<diffIncludeTablespace></diffIncludeTablespace>
+							<diffTypes></diffTypes>
+							<dropFirst></dropFirst>
+							<emptyPassword></emptyPassword>
+							<verbose></verbose>
+							<tag></tag>
+							 -->
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -39,26 +93,83 @@
 					<plugin>
 						<groupId>org.flywaydb</groupId>
 						<artifactId>flyway-maven-plugin</artifactId>
-						<configuration>
-							<url>jdbc:h2:file:${project.build.directory}/db/h2/resume-online</url>
-							<configFile>src/properties/flyway.properties</configFile>
-						</configuration>
 						<executions>
 							<execution>
-								<id>flyway-migrate-DDL</id>
+								<id>flyway-migrate</id>
 								<phase>install</phase>
-								<configuration>
-									<locations>
-										<location>filesystem:src\\db\\migrate\\DDL</location>
-										<location>filesystem:src\\db\\migrate\\DML</location>
-									</locations>
-								</configuration>
 								<goals>
-									<goal>clean</goal>
 									<goal>info</goal>
 									<goal>migrate</goal>
 									<goal>validate</goal>
 									<goal>info</goal>
+								</goals>
+								<configuration>
+									<locations>
+										<location>filesystem:src\\db\\flyway\\sql\\01-DDL</location>
+										<location>filesystem:src\\db\\flyway\\sql\\02-DML</location>
+									</locations>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.liquibase</groupId>
+						<artifactId>liquibase-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>liquibase-migrate</id>
+								<phase>install</phase>
+								<goals>
+									<goal>status</goal>
+									<goal>listLocks</goal>
+									<goal>updateSQL</goal>
+									<goal>update</goal>
+									<!-- 
+									<goal>updateTestingRollback</goal>
+									 -->
+									<goal>status</goal>
+									<goal>generateChangeLog</goal>
+									<goal>dbDoc</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>FLYWAY-CLEAN</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.flywaydb</groupId>
+						<artifactId>flyway-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>flyway-migrate-DDL</id>
+								<phase>clean</phase>
+								<goals>
+									<goal>clean</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>LIQUIBASE-CLEAN</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.liquibase</groupId>
+						<artifactId>liquibase-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>flyway-migrate-DDL</id>
+								<phase>clean</phase>
+								<goals>
+									<goal>dropAll</goal>
 								</goals>
 							</execution>
 						</executions>

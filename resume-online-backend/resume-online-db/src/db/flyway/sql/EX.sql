@@ -1,4 +1,4 @@
-
+ID
 CREATE TABLE USER_SECURITY (
                 ID VARCHAR(5) NOT NULL,
                 DT_DELETE TIMESTAMP NOT NULL,

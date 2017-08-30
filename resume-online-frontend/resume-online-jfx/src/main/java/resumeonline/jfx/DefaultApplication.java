@@ -1,6 +1,5 @@
 package resumeonline.jfx;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -29,7 +28,7 @@ public final class DefaultApplication
             URL css = ResourceThreadLoader.getResource(thread, "css/application.css");
             scene.getStylesheets().add(css.toExternalForm());
             return scene;
-        } catch (IOException e) {
+        } catch (Exception e) {
             throw new ApplicationRuntimeException(e);
         }
     }

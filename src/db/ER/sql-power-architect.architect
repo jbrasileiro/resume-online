@@ -310,7 +310,7 @@
     <column id="COL90" populated="true" UUID="eb30a266-e485-4e66-b480-53d7398802dd" autoIncrement="false" autoIncrementSequenceName="ADRESS_NAME_seq" defaultValue="" name="NAME" nullable="0" physicalName="NAME" precision="100" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL91" populated="true" UUID="17cf4d35-cd27-4721-99ad-32c45a01a151" autoIncrement="false" autoIncrementSequenceName="ADRESS_REFERENCE_seq" defaultValue="" name="REFERENCE" nullable="0" physicalName="REFERENCE" precision="100" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL91" populated="true" UUID="17cf4d35-cd27-4721-99ad-32c45a01a151" autoIncrement="false" autoIncrementSequenceName="ADRESS_REFERENCE_seq" defaultValue="" name="REFERENCE" nullable="1" physicalName="REFERENCE" precision="100" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
     <column id="COL92" populated="true" UUID="58c9c762-9852-4ed8-904c-3bf56ba695ce" autoIncrement="false" autoIncrementSequenceName="ADRESS_COMPLEMENT_seq" defaultValue="" name="COMPLEMENT" nullable="1" physicalName="COMPLEMENT" precision="150" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -325,7 +325,7 @@
     <column id="COL95" populated="true" UUID="ce0a534c-01c4-4546-8688-924018a1e97f" autoIncrement="false" autoIncrementSequenceName="ADRESS_COUNTRY_seq" defaultValue="" name="COUNTRY" nullable="0" physicalName="COUNTRY" precision="100" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL96" populated="true" UUID="b69b03cf-dba2-4a28-a2ba-34bca63310b5" autoIncrement="false" autoIncrementSequenceName="ADRESS_POST_CODE_seq" defaultValue="" name="POST_CODE" nullable="0" physicalName="POST_CODE" precision="25" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL96" populated="true" UUID="b69b03cf-dba2-4a28-a2ba-34bca63310b5" autoIncrement="false" autoIncrementSequenceName="ADRESS_POSTAL_CODE_seq" defaultValue="" name="POSTAL_CODE" nullable="0" physicalName="POSTAL_CODE" precision="25" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
     </folder>
@@ -342,7 +342,7 @@
   <table id="TAB99" populated="true" UUID="0a74e17d-52a9-4cbf-bc97-9f0017867d7d" name="SOCIAL_MEDIA" objectType="TABLE" physicalName="SOCIAL_MEDIA" >
    <remarks></remarks>
    <folder id="FOLTAB991" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL100" populated="true" UUID="c5243d0f-fdd0-4269-830e-5c076d11079a" autoIncrement="false" autoIncrementSequenceName="SEQ_SOCIAL_MEDIA" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="5" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+    <column id="COL100" populated="true" UUID="c5243d0f-fdd0-4269-830e-5c076d11079a" autoIncrement="true" autoIncrementSequenceName="SEQ_SOCIAL_MEDIA" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="5" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks></remarks>
     </column>
     <column id="COL101" populated="true" UUID="8ae8c142-7f0d-4f98-b791-b3ec27cd41e2" autoIncrement="false" defaultValue="" name="DT_CREATE" nullable="0" physicalName="DT_CREATE" precision="0" referenceCount="1" scale="0" source-column-ref="COL7" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
@@ -374,7 +374,7 @@
   <table id="TAB109" populated="true" UUID="9fe0f319-c640-4d95-95c5-c4f77d383d86" name="PERSON_SOCIAL_MEDIA" objectType="TABLE" physicalName="PERSON_SOCIAL_MEDIA" >
    <remarks></remarks>
    <folder id="FOLTAB1091" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL110" populated="true" UUID="6f94fc35-c1ec-4481-b52e-2ce12900a003" autoIncrement="false" autoIncrementSequenceName="PERSON_SOCIAL_MEDIA_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="5" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+    <column id="COL110" populated="true" UUID="6f94fc35-c1ec-4481-b52e-2ce12900a003" autoIncrement="true" autoIncrementSequenceName="PERSON_SOCIAL_MEDIA_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="5" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks></remarks>
     </column>
     <column id="COL111" populated="true" UUID="73324063-8f44-48af-887f-9cbcdf84f0fd" autoIncrement="false" defaultValue="" name="DT_DELETE" nullable="1" physicalName="DT_DELETE" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
@@ -389,7 +389,7 @@
     <column id="COL114" populated="true" UUID="52455e3b-213f-4061-abb0-1603cb811938" autoIncrement="false" autoIncrementSequenceName="PERSON_SOCIAL_MEDIA_ID_SOCIAL_MEDIA_seq" defaultValue="" name="ID_SOCIAL_MEDIA" nullable="0" physicalName="ID_SOCIAL_MEDIA" precision="5" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks></remarks>
     </column>
-    <column id="COL115" populated="true" UUID="39b9226c-0a47-435a-8d9e-a88479f5ad96" autoIncrement="false" autoIncrementSequenceName="USER_SECURITY_ID_USER_SECURITY_USER_SECURITY_seq" defaultValue="" name="ID_USER_SECURITY" nullable="0" physicalName="ID_USER_SECURITY" precision="5" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL115" populated="true" UUID="39b9226c-0a47-435a-8d9e-a88479f5ad96" autoIncrement="false" autoIncrementSequenceName="USER_SECURITY_ID_USER_SECURITY_USER_SECURITY_seq" defaultValue="" name="ID_USER_SECURITY" nullable="0" physicalName="ID_USER_SECURITY" precision="10" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks></remarks>
     </column>
     </folder>
@@ -410,7 +410,7 @@
   <table id="TAB121" populated="true" UUID="c0a1a7d2-6f63-4103-84f5-9fa0596de190" name="USER_SECURITY" objectType="TABLE" physicalName="USER_SECURITY" >
    <remarks></remarks>
    <folder id="FOLTAB1211" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL122" populated="true" UUID="3e799438-3cc7-401b-aedd-99fc29aaf959" autoIncrement="false" autoIncrementSequenceName="USER_SECURITY_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="5" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL122" populated="true" UUID="3e799438-3cc7-401b-aedd-99fc29aaf959" autoIncrement="true" autoIncrementSequenceName="USER_SECURITY_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks></remarks>
     </column>
     <column id="COL123" populated="true" UUID="00e00085-8c16-4c28-a3e3-2b606d8ab97b" autoIncrement="false" defaultValue="" name="DT_DELETE" nullable="0" physicalName="DT_DELETE" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
@@ -466,10 +466,10 @@
    </relationship>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.H2DDLGenerator" allow-connection="false"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.H2DDLGenerator" allow-connection="true"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="1.0" viewportX="352" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+ <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB5" x="1210" y="45" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB17" x="699" y="21" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB26" x="623" y="500" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>

@@ -24,7 +24,7 @@
 			<menus>
 				<Menu
 					mnemonicParsing="false"
-					text="File"
+					text="%file"
 				>
 					<items>
 						<MenuItem
@@ -127,17 +127,8 @@
 								text="%directory.colon"
 								HBox.hgrow="ALWAYS"
 							>
-								<opaqueInsets>
-									<Insets />
-								</opaqueInsets>
-								<HBox.margin>
-									<Insets
-										left="2.0"
-										right="2.0" />
-								</HBox.margin>
 								<styleClass>
-									<String fx:value="default-label" />
-									<String fx:value="default-padding" />
+									<String fx:value="default-border" />
 								</styleClass>
 							</Label>
 							<Label

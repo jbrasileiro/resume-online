@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd"
+>
+	<changeSet
+		id="DDL-201708"
+		author="liquidbase"
+	>
+		<tagDatabase tag="initial" />
+	</changeSet>
+	<changeSet
+		id="V-0.0.0.000000000000_1_1"
+		author="liquidbase"
+	>
+		<sqlFile
+			path="..\..\..\..\flyway\sql\01-DDL\V-0.0.0.000000000000_1_1__DDL-EXAMPLE.sql"
+			relativeToChangelogFile="true"
+			splitStatements="false" />
+		<rollback>
+			<sqlFile
+				path="V-0.0.0.000000000000_1_1__DDL-EXAMPLE-ROLLBACK.sql"
+				relativeToChangelogFile="true"
+				splitStatements="false" />
+		</rollback>
+	</changeSet>
+	<changeSet
+		id="V-0.0.0.201708292300_1_1"
+		author="liquidbase"
+	>
+		<sqlFile
+			path="..\..\..\..\flyway\sql\01-DDL\V-0.0.0.201708292300_1_1__DDL-CREATE-TBL-USER_SECURITY.sql"
+			relativeToChangelogFile="true"
+			splitStatements="false" />
+		<rollback>
+			<sqlFile
+				path="V-0.0.0.201708292300_1_1__DDL-CREATE-TBL-USER_SECURITY-ROLLBACK.sql"
+				relativeToChangelogFile="true"
+				splitStatements="false" />
+		</rollback>
+	</changeSet>
+	<changeSet
+		id="V-0.0.0.201708292300_1_2"
+		author="liquidbase"
+	>
+		<sqlFile
+			path="..\..\..\..\flyway\sql\01-DDL\V-0.0.0.201708292300_1_2__DDL-CREATE-TBL-SOCIAL_MEDIA.sql"
+			relativeToChangelogFile="true"
+			splitStatements="false" />
+		<rollback>
+			<sqlFile
+				path="V-0.0.0.201708292300_1_2__DDL-CREATE-TBL-SOCIAL_MEDIA-ROLLBACK.sql"
+				relativeToChangelogFile="true"
+				splitStatements="false" />
+		</rollback>
+	</changeSet>
+	<changeSet
+		id="V-0.0.0.201708292300_1_3"
+		author="liquidbase"
+	>
+		<sqlFile
+			path="..\..\..\..\flyway\sql\01-DDL\V-0.0.0.201708292300_1_3__DDL-CREATE-TBL-PERSON_SOCIAL_MEDIA.sql"
+			relativeToChangelogFile="true"
+			splitStatements="false" />
+		<rollback>
+			<sqlFile
+				path="V-0.0.0.201708292300_1_3__DDL-CREATE-TBL-PERSON_SOCIAL_MEDIA-ROLLBACK.sql"
+				relativeToChangelogFile="true"
+				splitStatements="false" />
+		</rollback>
+	</changeSet>
+	<changeSet
+		id="V-0.0.0.201708292300_1_4"
+		author="liquidbase"
+	>
+		<sqlFile
+			path="..\..\..\..\flyway\sql\01-DDL\V-0.0.0.201708292300_1_4__DDL-CREATE-TBL-ADRESS.sql"
+			relativeToChangelogFile="true"
+			splitStatements="false" />
+		<rollback>
+			<sqlFile
+				path="V-0.0.0.201708292300_1_4__DDL-CREATE-TBL-ADRESS-ROLLBACK.sql"
+				relativeToChangelogFile="true"
+				splitStatements="false" />
+		</rollback>
+	</changeSet>
+	<changeSet
+		id="V-0.0.0.201708292300_1_5"
+		author="liquidbase"
+	>
+		<sqlFile
+			path="..\..\..\..\flyway\sql\01-DDL\V-0.0.0.201708292300_1_5__DDL-CREATE-TBL-PHONE.sql"
+			relativeToChangelogFile="true"
+			splitStatements="false" />
+		<rollback>
+			<sqlFile
+				path="V-0.0.0.201708292300_1_5__DDL-CREATE-TBL-PHONE-ROLLBACK.sql"
+				relativeToChangelogFile="true"
+				splitStatements="false" />
+		</rollback>
+	</changeSet>
+</databaseChangeLog>
