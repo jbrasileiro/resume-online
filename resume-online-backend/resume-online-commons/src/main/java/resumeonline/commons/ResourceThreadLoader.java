@@ -5,6 +5,13 @@ import java.net.URL;
 
 import resumeonline.commons.exeception.NoNewInstanceAllowed;
 
+/**
+ * 
+ * @deprecated
+ * Class will be removed.
+ * Use resumeonline.commons.classloader.ResourceLoaderCL
+ */
+@Deprecated
 public final class ResourceThreadLoader {
 
     private ResourceThreadLoader() {
@@ -12,6 +19,11 @@ public final class ResourceThreadLoader {
         throw new NoNewInstanceAllowed(getClass());
     }
 
+    public static URL getResource(
+    		final String name) {
+    	return getResource(Thread.currentThread(), name);
+    }
+    
     public static URL getResource(
         final Thread thread,
         final String name) {

@@ -1,23 +1,30 @@
 package resume.online.core.service;
 
-import java.io.File;
-import java.net.URL;
+import java.io.InputStream;
 
-import resumeonline.commons.ResourceClassLoader;
+import resumeonline.commons.classloader.ResourceLoader;
 import resumeonline.commons.exeception.ApplicationRuntimeException;
 import resumeonline.commons.io.file.utils.FileReaderUtils;
 
 public class DefaultResumePDFService
-    implements
-    ResumePDFService {
+	implements
+	ResumePDFService {
 
-    @Override
-    public byte[] getResumeContent() {
-        try {
-            URL resource = ResourceClassLoader.getResource(getClass(), "example.pdf");
-            return FileReaderUtils.toByteArray(new File(resource.getPath()));
-        } catch (Exception e) {
-            throw new ApplicationRuntimeException(e);
-        }
-    }
+	private ResourceLoader loader;
+
+	public DefaultResumePDFService(
+		ResourceLoader loader) {
+		super();
+		this.loader = loader;
+	}
+
+	@Override
+	public byte[] getResumeContent() {
+		try {
+			InputStream resource = loader.loadResourceAsStream("example.pdf");
+			return FileReaderUtils.toByteArray(resource);
+		} catch (Exception e) {
+			throw new ApplicationRuntimeException(e);
+		}
+	}
 }
