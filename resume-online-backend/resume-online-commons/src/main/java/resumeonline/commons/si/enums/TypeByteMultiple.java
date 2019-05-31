@@ -60,7 +60,7 @@ public enum TypeByteMultiple {
         if (this == ZERO) {
             return 1;
         } else {
-            Double result = Math.pow(1024, (lenght));
+            Double result = Math.pow(1024, lenght);
             return result.longValue();
         }
     }

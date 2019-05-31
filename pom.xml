@@ -1,22 +1,19 @@
-<project
-	xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
->
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.owl-source-code.4j</groupId>
 		<artifactId>resume-online-super-pom</artifactId>
-		<version>J7.1.2.1-SNAPSHOT</version>
+		<version>J7.0.0.4</version>
+		<relativePath>./resume-online-super-pom/pom.xml</relativePath>
 	</parent>
 	<artifactId>resume-online</artifactId>
 	<packaging>pom</packaging>
 	<url>https://github.com/jbrasileiro/resume-online</url>
 	<modules>
 		<module>resume-online-super-pom</module>
-		<!-- 
-		<module>../Frameworks</module>
-		 -->
+		<!-- <module>../Frameworks</module> -->
 		<module>resume-online-bom</module>
 		<module>resume-online-i18n</module>
 		<module>resume-online-images</module>
@@ -27,9 +24,7 @@
 	<properties>
 		<project.property.dir>C:/.rep/git/P/resume-online/src/properties</project.property.dir>
 		<encoding>UTF-8</encoding>
-		<!-- 
-		<project.build.sourceEncoding>${maven.config.encoding}</project.build.sourceEncoding>
-		 -->
+		<!-- <project.build.sourceEncoding>${maven.config.encoding}</project.build.sourceEncoding> -->
 		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
 		<javafx.version>${maven.install.javafx.version}</javafx.version>
 		<!-- MAVEN PLUGINS VERSION -->

@@ -7,12 +7,11 @@
 	<parent>
 		<groupId>org.owl-source-code.4j</groupId>
 		<artifactId>resume-online-frontend</artifactId>
-		<version>J7.0.0.3</version>
+		<version>J7.0.0.4</version>
 	</parent>
 	<artifactId>resume-online-web</artifactId>
 	<packaging>war</packaging>
 	<properties>
-		<version.java>1.8</version.java>
 		<version.servlet-api>3.1.0</version.servlet-api>
 		<version.spring-webmvc>4.3.8.RELEASE</version.spring-webmvc>
 		<version.jstl>1.2</version.jstl>

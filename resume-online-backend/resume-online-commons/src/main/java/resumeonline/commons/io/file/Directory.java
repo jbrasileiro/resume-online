@@ -22,13 +22,12 @@ public final class Directory
         final String name) {
         super(directory, name);
         if (isFile()) {
-            ;
             throw new IllegalArgumentException();
         }
     }
 
     @Override
-    public final boolean createNewFile()
+    public boolean createNewFile()
         throws IOException {
         throw new UnsupportedOperationException();
     }

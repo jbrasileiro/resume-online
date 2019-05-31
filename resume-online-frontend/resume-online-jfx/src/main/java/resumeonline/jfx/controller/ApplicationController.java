@@ -15,7 +15,6 @@ import resumeonline.commons.classloader.ResourceLoaderCL;
 import resumeonline.commons.classloader.ResourceLoaderThread;
 import resumeonline.commons.exeception.ApplicationRuntimeException;
 import resumeonline.commons.io.file.utils.FileWriterUtils;
-import resumeonline.jfx.cdi.core.WeldProvider;
 import resumeonline.jfx.core.WritableDirectoryAction;
 import resumeonline.jfx.core.controller.AbstractI18NController;
 

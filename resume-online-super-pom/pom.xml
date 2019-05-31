@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>org.owl-source-code.4j</groupId>
 	<artifactId>resume-online-super-pom</artifactId>
-	<version>J7.1.2.1-SNAPSHOT</version>
+	<version>J7.0.0.4</version>
 	<packaging>pom</packaging>
 	<build>
 		<pluginManagement>

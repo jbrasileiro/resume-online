@@ -18,7 +18,7 @@ public final class FileMakerUtils {
         final File file,
         final boolean delete)
         throws IOException {
-        if (file.exists() && (delete && !FileDeleterUtils.delete(file))) {
+        if (file.exists() && delete && !FileDeleterUtils.delete(file)) {
             throw new FileNotDeleted(file);
         }
         return newFile(file);

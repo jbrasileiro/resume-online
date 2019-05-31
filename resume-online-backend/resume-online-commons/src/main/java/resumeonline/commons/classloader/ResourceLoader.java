@@ -5,9 +5,9 @@ import java.net.URL;
 
 public interface ResourceLoader {
 
-	public URL loadResource(
+	URL loadResource(
 		final String name);
 
-	public InputStream loadResourceAsStream(
+	InputStream loadResourceAsStream(
 		final String name);
 }
