@@ -27,7 +27,7 @@ public class TextFieldConfigurator {
 
     public TextFieldConfigurator addFocusedPropertyListener(
         final FocusChangeListener focusChangeListener) {
-        addFocusedPropertyListener(focusChangeListener);
+        field.focusedProperty().addFocusedPropertyListener(focusChangeListener);
         return this;
     }
 
