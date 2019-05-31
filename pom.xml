@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.owl-source-code.4j</groupId>
 	<artifactId>resume-online</artifactId>
-	<version>0.0.2</version>
+	<version>J7.0.0.3</version>
 	<packaging>pom</packaging>
 	<url>http://maven.apache.org</url>
 	<modules>
@@ -30,6 +30,7 @@
 		<javafx.version>${maven.install.javafx.version}</javafx.version>
 		<!-- MAVEN PLUGINS VERSION -->
 		<version-maven-eclipse-plugin>2.9</version-maven-eclipse-plugin>
+		<version-maven-help-plugin>3.2.0</version-maven-help-plugin>
 		<version-maven-compiler-plugin>3.1</version-maven-compiler-plugin>
 		<version-maven-war-plugin>2.3</version-maven-war-plugin>
 		<version-maven-dependency-plugin>2.6</version-maven-dependency-plugin>
@@ -39,6 +40,7 @@
 		<version-tomcat7-maven-plugin>2.2</version-tomcat7-maven-plugin>
 		<version-properties-maven-plugin>1.0.0</version-properties-maven-plugin>
 		<version-maven-surefire-plugin>2.20</version-maven-surefire-plugin>
+		<version-maven-failsafe-plugin>3.0.0-M3</version-maven-failsafe-plugin>
 		<version-maven-install-plugin>2.5.2</version-maven-install-plugin>
 		<version-maven-jar-plugin>3.0.2</version-maven-jar-plugin>
 		<version-javafx-maven-plugin>2.0</version-javafx-maven-plugin>
@@ -79,6 +81,11 @@
 						<!-- Avoid type mvn eclipse:eclipse -Dwtpversion=2.0 -->
 						<wtpversion>2.0</wtpversion>
 					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-help-plugin</artifactId>
+					<version>${version-maven-help-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
@@ -154,7 +161,7 @@
 				<plugin>
 					<groupId>org.apache.tomcat.maven</groupId>
 					<artifactId>tomcat7-maven-plugin</artifactId>
-					<version>${version-tomcat7-maven-plugin}2.2</version>
+					<version>${version-tomcat7-maven-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.flywaydb</groupId>

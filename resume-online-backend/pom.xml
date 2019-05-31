@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.owl-source-code.4j</groupId>
     <artifactId>resume-online</artifactId>
-    <version>0.0.2</version>
+    <version>J7.0.0.3</version>
   </parent>
   <artifactId>resume-online-backend</artifactId>
   <packaging>pom</packaging>
