@@ -17,7 +17,7 @@
 	prefHeight="143.0"
 	prefWidth="640.0"
 	type="VBox"
-	fx:controller="resumeonline.jfx.controller.ApplicationContoller"
+	fx:controller="resumeonline.jfx.controller.ApplicationController"
 >
 	<children>
 		<MenuBar VBox.vgrow="NEVER">
