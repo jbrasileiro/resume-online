@@ -2,8 +2,8 @@
 SETLOCAL
 
 ::SET VARIABLE
-SET VERSION=J7.0.0.2
-SET NEXT_VERSION=J7.0.0.3-SNAPSHOT
+SET VERSION=J7.0.0.3
+SET NEXT_VERSION=J7.0.0.4-SNAPSHOT
 
 ::STARTING
 echo executing in current dir "%~dp0"
@@ -18,7 +18,6 @@ git commit
 mvn release:perform
 GOTO:EOF
 
-## LABEL
 :ROLLBACK
 mvn release:rollback
 mvn versions:revert
