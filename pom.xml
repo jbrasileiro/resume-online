@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.owl-source-code.4j</groupId>
 	<artifactId>resume-online</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<packaging>pom</packaging>
 	<url>http://maven.apache.org</url>
 	<modules>
@@ -21,7 +21,7 @@
 		<module>TI-resume-online</module>
 	</modules>
 	<properties>
-		<project.property.dir>C:/.rep/P/resume-online/src/properties</project.property.dir>
+		<project.property.dir>C:/.rep/git/P/resume-online/src/properties</project.property.dir>
 		<encoding>UTF-8</encoding>
 		<!-- 
 		<project.build.sourceEncoding>${maven.config.encoding}</project.build.sourceEncoding>
