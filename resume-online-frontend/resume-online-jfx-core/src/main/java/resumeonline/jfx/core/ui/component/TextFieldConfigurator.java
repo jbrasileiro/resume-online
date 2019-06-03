@@ -1,7 +1,5 @@
 package resumeonline.jfx.core.ui.component;
 
-import java.util.Arrays;
-
 import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -29,7 +27,7 @@ public class TextFieldConfigurator {
 
     public TextFieldConfigurator addFocusedPropertyListener(
         final FocusChangeListener focusChangeListener) {
-    	ChangeListener<Boolean> changeListener = focusChangeListener;
+    	final ChangeListener<Boolean> changeListener = focusChangeListener;
 		return this.addFocusedPropertyListener(changeListener);
     }
 
@@ -52,8 +50,8 @@ public class TextFieldConfigurator {
                 final ObservableValue<? extends String> observable,
                 final String oldValue,
                 final String newValue) {
-                StringProperty value = (StringProperty) observable;
-                TextField textField = (TextField) value.getBean();
+                final StringProperty value = (StringProperty) observable;
+                final TextField textField = (TextField) value.getBean();
                 System.out.println("textfield changed from " + oldValue + " to " + newValue);
                 System.out.println(textField.toString());
             }

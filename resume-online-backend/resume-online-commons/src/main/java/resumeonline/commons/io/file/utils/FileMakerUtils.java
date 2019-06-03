@@ -5,6 +5,8 @@ import java.io.IOException;
 
 import resumeonline.commons.exeception.FileNotDeleted;
 import resumeonline.commons.exeception.NoNewInstanceAllowed;
+import resumeonline.commons.io.exception.DirectoryAlreadyExist;
+import resumeonline.commons.io.exception.DirectoryNotCreated;
 import resumeonline.commons.io.file.Directory;
 
 public final class FileMakerUtils {
@@ -24,30 +26,25 @@ public final class FileMakerUtils {
         return newFile(file);
     }
 
-    public static void mkdir(
-        final Iterable<Directory> directories)
-        throws IOException {
-        for (Directory directory : directories) {
-            mkdir(directory);
-        }
-    }
-
-    public static boolean mkdir(
-        final Directory directory) {
-        if (directory.exists()) {
-            return true;
-        } else {
-            return directory.mkdirs();
-        }
-    }
+	public static boolean mkdir(
+		final Directory directory,
+		final boolean ignoreExists)
+		throws DirectoryAlreadyExist {
+		if (directory.exists() || !ignoreExists) {
+			throw new DirectoryAlreadyExist(directory);
+		} else {
+			return directory.mkdirs();
+		}
+	}
 
     private static boolean newFile(
         final File file)
         throws IOException {
-        File parent = file.getParentFile();
-        if (parent != null) {
-            parent.mkdirs();
-        }
-        return file.createNewFile();
+        final File parent = file.getParentFile();
+		if (parent != null && !parent.mkdirs()) {
+			throw new DirectoryNotCreated(parent);
+		}else {
+			return file.createNewFile();
+		}
     }
 }
