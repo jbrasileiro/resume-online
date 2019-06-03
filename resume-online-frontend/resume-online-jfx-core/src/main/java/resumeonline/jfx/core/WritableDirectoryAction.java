@@ -8,7 +8,6 @@ import resumeonline.commons.EventAction;
 import resumeonline.commons.EventActionType;
 import resumeonline.commons.io.file.Directory;
 import resumeonline.commons.si.NoEventAction;
-import resumeonline.jfx.core.JFXChooser;
 
 public final class WritableDirectoryAction
     implements
@@ -40,7 +39,7 @@ public final class WritableDirectoryAction
         if (action == null) {
             throw new IllegalArgumentException();
         }
-        File file = JFXChooser.showDirectoryChooser(pane, directory);
+        final File file = JFXChooser.showDirectoryChooser(pane, directory);
         if (file != null) {
             field.setValue(file.getAbsolutePath());
             action.execute(file);
