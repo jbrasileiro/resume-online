@@ -6,10 +6,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.owl-source-code.4j</groupId>
 	<artifactId>resume-online-bom</artifactId>
-	<version>1.0.0</version>
+	<version>J7.0.0.6</version>
 	<packaging>pom</packaging>
 	<properties>
-		<version.module.bandle>0.0.1</version.module.bandle>
+		<version.module.bandle>${project.version}</version.module.bandle>
 		<!-- DEPENDENCY VERSION -->
 		<version.junit>4.12</version.junit>
 		<version.mockito-all>1.10.19</version.mockito-all>
