@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.owl-source-code.4j</groupId>
 		<artifactId>resume-online-frontend</artifactId>
-		<version>J7.0.0.4</version>
+		<version>J7.0.0.6</version>
 	</parent>
 	<artifactId>resume-online-web</artifactId>
 	<packaging>war</packaging>

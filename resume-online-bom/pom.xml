@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.owl-source-code.4j</groupId>
 	<artifactId>resume-online-bom</artifactId>
-	<version>J7.0.0.6</version>
+	<version>J7.0.0.4</version>
 	<packaging>pom</packaging>
 	<properties>
 		<version.module.bandle>${project.version}</version.module.bandle>
