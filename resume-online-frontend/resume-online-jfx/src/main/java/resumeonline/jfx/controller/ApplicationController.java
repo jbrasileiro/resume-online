@@ -8,13 +8,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import resume.online.core.service.DefaultResumePDFService;
 import resume.online.core.service.ResumePDFService;
 import resumeonline.awt.WindowFile;
-import resumeonline.commons.classloader.ResourceLoaderCL;
-import resumeonline.commons.classloader.ResourceLoaderThread;
 import resumeonline.commons.exeception.ApplicationRuntimeException;
 import resumeonline.commons.io.file.utils.FileWriterUtils;
+import resumeonline.jfx.cdi.core.WeldProvider;
 import resumeonline.jfx.core.WritableDirectoryAction;
 import resumeonline.jfx.core.controller.AbstractI18NController;
 
@@ -31,8 +29,7 @@ public final class ApplicationController
 
     public ApplicationController() {
         super();
-//        resumePDFService = WeldProvider.getBean(ResumePDFService.class);//TODO
-        resumePDFService = new DefaultResumePDFService(new ResourceLoaderThread(new ResourceLoaderCL()));
+        resumePDFService = WeldProvider.getBean(ResumePDFService.class);
     }
 
     @Override

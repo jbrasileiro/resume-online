@@ -5,9 +5,9 @@ import org.jboss.weld.environment.se.WeldContainer;
 
 import resumeonline.commons.exeception.NoNewInstanceAllowed;
 
-public final class WeldProvider {
+public final class CustomWeldProvider {
 
-    private WeldProvider() {
+    private CustomWeldProvider() {
         super();
         throw new NoNewInstanceAllowed(getClass());
     }

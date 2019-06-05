@@ -10,7 +10,7 @@ public abstract class AbstractWeldJavaFXApplication
     Application {
 
     private final Class<? extends Application> clazz;
-    private static final WeldContainer WELD_CONTAINER = WeldProvider.get();
+    private static final WeldContainer WELD_CONTAINER = CustomWeldProvider.get();
 
     protected AbstractWeldJavaFXApplication(
         final Class<? extends Application> clazz) {
