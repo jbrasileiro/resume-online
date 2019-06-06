@@ -2,8 +2,8 @@
 SETLOCAL
 
 ::SET VARIABLE
-SET VERSION=J7.0.0.6
-SET NEXT_VERSION=J7.0.0.7-SNAPSHOT
+SET VERSION=J7.0.0.7-SNAPSHOT
+SET NEXT_VERSION=J7.0.0.8
 
 
 ::STARTING
@@ -46,6 +46,11 @@ if %ERRORLEVEL% EQU 0 (
 
 cmd /C mvn -f resume-online-bom\pom.xml versions:set -DnewVersion=%VERSION%
 cmd /C mvn clean install -q
+cmd /C mvn -f resume-online-bom\pom.xml versions:commit
+
+::cmd /C mvn release:clean release:prepare -Dresume=false -DreleaseVersion=%VERSION% -DdevelopmentVersion=%NEXT_VERSION%
+::cmd /C mvn --batch-mode release:update-versions -DreleaseVersion=%VERSION% -DdevelopmentVersion=%NEXT_VERSION% -DautoVersionSubmodules=true
+::cmd /C mvn release:perform
 GOTO:EOF
 
 :ROLLBACK

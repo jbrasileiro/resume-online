@@ -9,8 +9,19 @@
 	</parent>
 	<groupId>org.owl-source-code.4j</groupId>
 	<artifactId>resume-online-super-pom</artifactId>
-	<version>J7.0.0.6</version>
+	<version>J7.0.0.7-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	<name>Resume-online super-pom [${project.version}]</name>
+	<url>https://github.com/jbrasileiro/resume-online</url>
+	<organization>
+		<name>jbrasileiro</name>
+		<url>https://github.com/jbrasileiro</url>
+	</organization>
+	<scm>
+		<url>https://github.com/jbrasileiro/resume-online.git</url>
+		<connection>scm:git:https://github.com/jbrasileiro/resume-online.git</connection>
+		<developerConnection>scm:git:https://github.com/jbrasileiro/resume-online.git</developerConnection>
+	</scm>
 	<build>
 		<pluginManagement>
 			<plugins>
