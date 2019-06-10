@@ -11,7 +11,7 @@ public final class ApplicationWeldLuncher
         super(DefaultApplication.class);
     }
 
-    public static void main(
+	public static void main(
         final String[] args) {
         Application.launch(ApplicationWeldLuncher.class, args);
     }

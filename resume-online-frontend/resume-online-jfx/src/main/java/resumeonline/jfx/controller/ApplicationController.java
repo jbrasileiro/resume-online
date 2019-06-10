@@ -3,16 +3,20 @@ package resumeonline.jfx.controller;
 import java.io.File;
 import java.io.IOException;
 
+import javax.inject.Inject;
+
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import resume.online.core.service.DefaultResumePDFService;
 import resume.online.core.service.ResumePDFService;
 import resumeonline.awt.WindowFile;
+import resumeonline.commons.classloader.ResourceLoaderCL;
+import resumeonline.commons.classloader.ResourceLoaderThread;
 import resumeonline.commons.exeception.ApplicationRuntimeException;
 import resumeonline.commons.io.file.utils.FileWriterUtils;
-import resumeonline.jfx.cdi.core.WeldProvider;
 import resumeonline.jfx.core.WritableDirectoryAction;
 import resumeonline.jfx.core.controller.AbstractI18NController;
 
@@ -27,9 +31,10 @@ public final class ApplicationController
     private final SimpleStringProperty directory = new SimpleStringProperty("");
     private final ResumePDFService resumePDFService;
 
+    @Inject
     public ApplicationController() {
         super();
-        resumePDFService = WeldProvider.getBean(ResumePDFService.class);
+		this.resumePDFService = new DefaultResumePDFService(new ResourceLoaderThread(new ResourceLoaderCL()));
     }
 
     @Override

@@ -11,16 +11,24 @@ public final class CustomWeldProvider {
         super();
         throw new NoNewInstanceAllowed(getClass());
     }
+    
+    private static WeldContainer WELD_CONTAINER;
 
-    private static final WeldContainer WELD_CONTAINER = new Weld().initialize();
+	public static WeldContainer initialize(Weld weld) {
+		return WELD_CONTAINER = weld.initialize();
+	}
 
-    public static WeldContainer get() {
+    private static WeldContainer get() {
         return WELD_CONTAINER;
     }
 
     // FIXME : Should be work with @inject by field;
     public static <T> T getBean(
         final Class<T> type) {
-        return WELD_CONTAINER.select(type).get();
+        return get().select(type).get();
     }
+
+	public static void closeContainer() {
+		WELD_CONTAINER.close();
+	}
 }
