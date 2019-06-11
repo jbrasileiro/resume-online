@@ -17,5 +17,7 @@
 		<module>resume-online-dao-imp</module>
 		<module>resume-online-SOA</module>
 		<module>resume-online-commons</module>
+		<module>resume-online-ws</module>
+		<module>resume-online-ws-springboot</module>
   </modules>
 </project>
