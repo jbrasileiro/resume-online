@@ -2,6 +2,8 @@ package resume.online.core.service;
 
 import java.io.InputStream;
 
+import javax.inject.Inject;
+
 import resumeonline.commons.classloader.ResourceLoader;
 import resumeonline.commons.exeception.ApplicationRuntimeException;
 import resumeonline.commons.io.file.utils.FileReaderUtils;
@@ -12,6 +14,7 @@ public class DefaultResumePDFService
 
 	private ResourceLoader loader;
 
+	@Inject
 	public DefaultResumePDFService(
 		ResourceLoader loader) {
 		super();

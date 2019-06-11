@@ -10,13 +10,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import resume.online.core.service.DefaultResumePDFService;
 import resume.online.core.service.ResumePDFService;
 import resumeonline.awt.WindowFile;
-import resumeonline.commons.classloader.ResourceLoaderCL;
-import resumeonline.commons.classloader.ResourceLoaderThread;
 import resumeonline.commons.exeception.ApplicationRuntimeException;
 import resumeonline.commons.io.file.utils.FileWriterUtils;
+import resumeonline.jfx.cdi.core.CustomWeldProvider;
 import resumeonline.jfx.core.WritableDirectoryAction;
 import resumeonline.jfx.core.controller.AbstractI18NController;
 
@@ -34,10 +32,10 @@ public final class ApplicationController
     @Inject
     public ApplicationController() {
         super();
-		this.resumePDFService = new DefaultResumePDFService(new ResourceLoaderThread(new ResourceLoaderCL()));
+        this.resumePDFService = CustomWeldProvider.getBean(ResumePDFService.class);
     }
 
-    @Override
+	@Override
     protected void initialize() {
         lblDirectory.textProperty().bind(directory);
         directory.set(System.getProperty("user.home"));
