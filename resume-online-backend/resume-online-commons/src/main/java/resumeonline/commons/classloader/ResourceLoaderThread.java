@@ -4,7 +4,9 @@ import java.io.InputStream;
 import java.net.URL;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
+@Named
 public class ResourceLoaderThread
 	implements
 	ResourceLoader {

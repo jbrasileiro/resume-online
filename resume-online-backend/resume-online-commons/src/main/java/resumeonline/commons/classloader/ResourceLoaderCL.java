@@ -3,8 +3,11 @@ package resumeonline.commons.classloader;
 import java.io.InputStream;
 import java.net.URL;
 
+import javax.inject.Named;
+
 import resumeonline.commons.exeception.ResourceNotFound;
 
+@Named
 public final class ResourceLoaderCL {
 
 	public URL loadResource(

@@ -5,4 +5,4 @@
  * @author joao.almeida
  *
  */
-package resume.online.core;
+package resumeonline.core;

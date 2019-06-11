@@ -1,4 +1,4 @@
-package resume.online.core.service;
+package resumeonline.core.service;
 
 public interface ResumePDFService {
 
