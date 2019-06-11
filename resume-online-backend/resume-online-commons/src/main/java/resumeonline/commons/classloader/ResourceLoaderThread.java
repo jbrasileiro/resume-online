@@ -3,12 +3,15 @@ package resumeonline.commons.classloader;
 import java.io.InputStream;
 import java.net.URL;
 
+import javax.inject.Inject;
+
 public class ResourceLoaderThread
 	implements
 	ResourceLoader {
 
 	private ResourceLoaderCL loader;
 
+	@Inject
 	public ResourceLoaderThread(
 		ResourceLoaderCL loader) {
 		super();
