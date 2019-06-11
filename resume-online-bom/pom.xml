@@ -22,6 +22,7 @@
 		<version.commons-io>2.5</version.commons-io>
 		<version.itextpdf>5.5.11</version.itextpdf>
 		<version.demoiselle>1.2.1</version.demoiselle>
+		<version.log4j>1.2.17</version.log4j>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -146,6 +147,11 @@
 				<groupId>com.itextpdf.tool</groupId>
 				<artifactId>xmlworker</artifactId>
 				<version>${version.itextpdf}</version>
+			</dependency>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${version.log4j}</version>
 			</dependency>
 			<!-- ################# -->
 			<!-- TEST -->

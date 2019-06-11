@@ -52,7 +52,7 @@
 			<dependency>
 				<groupId>org.owl-source-code.4j</groupId>
 				<artifactId>resume-online-bom</artifactId>
-				<version>1.0.0</version>
+				<version>${project.version}</version>
 				<scope>import</scope>
 				<type>pom</type>
 			</dependency>
