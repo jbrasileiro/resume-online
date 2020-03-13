@@ -19,5 +19,6 @@
 		<module>resume-online-commons</module>
 		<module>resume-online-ws</module>
 		<module>resume-online-ws-springboot</module>
+		<module>resume-online-ws-microprofile</module>
   </modules>
 </project>

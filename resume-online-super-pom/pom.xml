@@ -1,15 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.github.osp-huhula</groupId>
 		<artifactId>huhula-super-pom</artifactId>
 		<version>J7.1.1.6</version>
 	</parent>
-	<groupId>org.owl-source-code.4j</groupId>
-	<artifactId>resume-online-super-pom</artifactId>
-	<version>J7.0.0.7-SNAPSHOT</version>
+	<artifactId>texto2line-4j</artifactId>
 	<packaging>pom</packaging>
 	<name>Resume-online super-pom [${project.version}]</name>
 	<url>https://github.com/jbrasileiro/resume-online</url>
@@ -32,5 +32,19 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<configuration>
+							<skip>true</skip>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
 </project>
