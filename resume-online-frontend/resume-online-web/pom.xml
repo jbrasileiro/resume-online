@@ -5,9 +5,9 @@
 >
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.owl-source-code.4j</groupId>
+		<groupId>com.github.jbrasileiro</groupId>
 		<artifactId>resume-online-frontend</artifactId>
-		<version>J7.0.0.7-SNAPSHOT</version>
+		<version>J7.1.1.6</version>
 	</parent>
 	<artifactId>resume-online-web</artifactId>
 	<packaging>war</packaging>
@@ -20,7 +20,7 @@
 		<!-- ####################### -->
 		<!-- MODULE -->
 		<dependency>
-			<groupId>org.owl-source-code.4j</groupId>
+			<groupId>com.github.jbrasileiro</groupId>
 			<artifactId>resume-online-i18n</artifactId>
 		</dependency>
 		<!-- ####################### -->

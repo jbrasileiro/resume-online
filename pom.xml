@@ -3,10 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.owl-source-code.4j</groupId>
+		<groupId>com.github.jbrasileiro</groupId>
 		<artifactId>resume-online-super-pom</artifactId>
-		<version>J7.0.0.7-SNAPSHOT</version>
-		<relativePath>./resume-online-super-pom/pom.xml</relativePath>
+		<version>J7.1.1.6</version>
 	</parent>
 	<artifactId>resume-online</artifactId>
 	<packaging>pom</packaging>
@@ -22,7 +21,8 @@
 		<module>TI-resume-online</module>
 	</modules>
 	<properties>
-		<project.property.dir>C:/.rep/git/P/resume-online/src/properties</project.property.dir>
+		<custom.project.dir>C:/.rep/git/P/resume-online</custom.project.dir>
+		<custom.property.dir>${custom.project.dir}/src/properties</custom.property.dir>
 		<encoding>UTF-8</encoding>
 		<!-- <project.build.sourceEncoding>${maven.config.encoding}</project.build.sourceEncoding> -->
 		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
@@ -50,7 +50,7 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>org.owl-source-code.4j</groupId>
+				<groupId>com.github.jbrasileiro</groupId>
 				<artifactId>resume-online-bom</artifactId>
 				<version>${project.version}</version>
 				<scope>import</scope>
@@ -231,12 +231,12 @@
 						</goals>
 						<configuration>
 							<files>
-								<file>${project.property.dir}/mvn-java.properties</file>
-								<file>${project.property.dir}/mvn-read-properties.properties</file>
-								<file>${project.property.dir}/mvn-configuration.properties</file>
-								<file>${project.property.dir}/mvn-compiler.properties</file>
-								<file>${project.property.dir}/mvn-dependency.properties</file>
-								<file>${project.property.dir}/mvn-install.properties</file>
+								<file>${custom.property.dir}/mvn-java.properties</file>
+								<file>${custom.property.dir}/mvn-read-properties.properties</file>
+								<file>${custom.property.dir}/mvn-configuration.properties</file>
+								<file>${custom.property.dir}/mvn-compiler.properties</file>
+								<file>${custom.property.dir}/mvn-dependency.properties</file>
+								<file>${custom.property.dir}/mvn-install.properties</file>
 							</files>
 						</configuration>
 					</execution>

@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.owl-source-code.4j</groupId>
+		<groupId>com.github.jbrasileiro</groupId>
 		<artifactId>resume-online-frontend</artifactId>
-		<version>J7.0.0.7-SNAPSHOT</version>
+		<version>J7.1.1.6</version>
 	</parent>
 	<artifactId>resume-online-jfx</artifactId>
 	<dependencies>
@@ -15,11 +15,11 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.owl-source-code.4j</groupId>
+			<groupId>com.github.jbrasileiro</groupId>
 			<artifactId>resume-online-jfx-cdi</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.owl-source-code.4j</groupId>
+			<groupId>com.github.jbrasileiro</groupId>
 			<artifactId>resume-online-core</artifactId>
 		</dependency>
 		<dependency>

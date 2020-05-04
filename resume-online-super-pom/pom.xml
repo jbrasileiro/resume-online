@@ -9,7 +9,8 @@
 		<artifactId>huhula-super-pom</artifactId>
 		<version>J7.1.1.6</version>
 	</parent>
-	<artifactId>texto2line-4j</artifactId>
+	<groupId>com.github.jbrasileiro</groupId>
+	<artifactId>resume-online-super-pom</artifactId>
 	<packaging>pom</packaging>
 	<name>Resume-online super-pom [${project.version}]</name>
 	<url>https://github.com/jbrasileiro/resume-online</url>

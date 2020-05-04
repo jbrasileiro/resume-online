@@ -4,9 +4,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 >
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.owl-source-code.4j</groupId>
+	<groupId>com.github.jbrasileiro</groupId>
 	<artifactId>resume-online-bom</artifactId>
-	<version>J7.0.0.7-SNAPSHOT</version>
+	<version>J7.1.1.6</version>
 	<packaging>pom</packaging>
 	<properties>
 		<version.module.bandle>${project.version}</version.module.bandle>
@@ -28,62 +28,62 @@
 		<dependencies>
 			<!-- MODULES VERSION -->
 			<dependency>
-				<groupId>org.owl-source-code.4j</groupId>
+				<groupId>com.github.jbrasileiro</groupId>
 				<artifactId>resume-online-images</artifactId>
 				<version>${version.module.bandle}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.owl-source-code.4j</groupId>
+				<groupId>com.github.jbrasileiro</groupId>
 				<artifactId>resume-online-i18n</artifactId>
 				<version>${version.module.bandle}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.owl-source-code.4j</groupId>
+				<groupId>com.github.jbrasileiro</groupId>
 				<artifactId>resume-online-commons</artifactId>
 				<version>${version.module.bandle}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.owl-source-code.4j</groupId>
+				<groupId>com.github.jbrasileiro</groupId>
 				<artifactId>resume-online-core</artifactId>
 				<version>${version.module.bandle}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.owl-source-code.4j</groupId>
+				<groupId>com.github.jbrasileiro</groupId>
 				<artifactId>resume-online-jfx-core</artifactId>
 				<version>${version.module.bandle}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.owl-source-code.4j</groupId>
+				<groupId>com.github.jbrasileiro</groupId>
 				<artifactId>resume-online-jfx-cdi</artifactId>
 				<version>${version.module.bandle}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.owl-source-code.4j</groupId>
+				<groupId>com.github.jbrasileiro</groupId>
 				<artifactId>resume-online-dao-imp</artifactId>
 				<version>${version.module.bandle}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.owl-source-code.4j</groupId>
+				<groupId>com.github.jbrasileiro</groupId>
 				<artifactId>resume-online-db</artifactId>
 				<version>${version.module.bandle}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.owl-source-code.4j</groupId>
+				<groupId>com.github.jbrasileiro</groupId>
 				<artifactId>resume-online-entity</artifactId>
 				<version>${version.module.bandle}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.owl-source-code.4j</groupId>
+				<groupId>com.github.jbrasileiro</groupId>
 				<artifactId>resume-online-SOA</artifactId>
 				<version>${version.module.bandle}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.owl-source-code.4j</groupId>
+				<groupId>com.github.jbrasileiro</groupId>
 				<artifactId>resume-online-jfx</artifactId>
 				<version>${version.module.bandle}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.owl-source-code.4j</groupId>
+				<groupId>com.github.jbrasileiro</groupId>
 				<artifactId>resume-online-web</artifactId>
 				<version>${version.module.bandle}</version>
 			</dependency>
@@ -177,4 +177,32 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>2.5.2</version>
+				<inherited>false</inherited>
+				<executions>
+					<execution>
+						<id>install-javafx</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>install-file</goal>
+						</goals>
+						<configuration>
+							<file>C:/.app/Java/jdk1.7.0_80/jre/lib/jfxrt.jar</file>
+							<repositoryLayout>default</repositoryLayout>
+							<groupId>com.oracle</groupId>
+							<artifactId>jfxrt</artifactId>
+							<version>2.2.80</version>
+							<packaging>jar</packaging>
+							<generatePom>true</generatePom>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

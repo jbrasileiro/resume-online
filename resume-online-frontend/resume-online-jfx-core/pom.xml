@@ -5,9 +5,9 @@
 >
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.owl-source-code.4j</groupId>
+		<groupId>com.github.jbrasileiro</groupId>
 		<artifactId>resume-online-frontend</artifactId>
-		<version>J7.0.0.7-SNAPSHOT</version>
+		<version>J7.1.1.6</version>
 	</parent>
 	<artifactId>resume-online-jfx-core</artifactId>
 	<dependencies>
@@ -17,11 +17,11 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.owl-source-code.4j</groupId>
+			<groupId>com.github.jbrasileiro</groupId>
 			<artifactId>resume-online-commons</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.owl-source-code.4j</groupId>
+			<groupId>com.github.jbrasileiro</groupId>
 			<artifactId>resume-online-images</artifactId>
 		</dependency>
 	</dependencies>
