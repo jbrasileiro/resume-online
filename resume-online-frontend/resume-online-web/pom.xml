@@ -13,7 +13,7 @@
 	<packaging>war</packaging>
 	<properties>
 		<version.servlet-api>3.1.0</version.servlet-api>
-		<version.spring-webmvc>4.3.8.RELEASE</version.spring-webmvc>
+		<version.spring-webmvc>5.2.20.RELEASE</version.spring-webmvc>
 		<version.jstl>1.2</version.jstl>
 	</properties>
 	<dependencies>
